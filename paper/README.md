@@ -9,6 +9,7 @@ This directory contains a pdf of the specifications that elsevier has for its jo
 ## IMPORTANT
 
 Remember not to push .log, .aux, or .pdf file to the master branch. Leave these log files on your host machine. Only push .tex or vector graphic files. 
+ABSOLUTELY NO USING EMACS! NO EXCEPTIONS.
 
 ## Writing Latex
 
