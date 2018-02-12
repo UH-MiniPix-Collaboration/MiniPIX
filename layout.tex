@@ -1,0 +1,472 @@
+\documentclass[aps,twocolumn,secnumarabic,nobalancelastpage,amsmath,amssymb,nofootinbib]{revtex4}
+
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{longtable}
+\usepackage{url}
+%\usepackage{jlrstyle}
+\usepackage{bm}
+\usepackage{lgrind}
+\usepackage{chapterbib}
+\usepackage{color}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% style definitions
+
+\bibliographystyle{apsrev}
+\begin{document}
+
+
+\title{Writing About Physics Using \LaTeX}
+\author         {S.D. Sewell}
+%\homepage {http://phys.uh.edu}
+\affiliation    {MIT Department of Physics}
+\author    {edited by R. Forrest}
+\email          {rforrest@uh.edu}
+\affiliation {University of Houston}
+\date{\today}
+
+
+
+\begin{abstract}
+
+We present a written summary template for use by UH Junior Lab
+students, using \LaTeX and the {\bf RevTeX-4} macro package from the
+American Physical Society.  This is the standard package used in
+preparing most Physical Review papers, and is used in many other
+journals as well.  The individual summary you hand in should show
+evidence of your own mastery of the entire experiment, and possess a
+neat appearance with concise and correct English.  The abstract is
+essential.  It should briefly mention the motivation, the method and
+most important, the quantitative result with errors.  Based on
+those, a conclusion may be drawn.  The length of the paper should be
+no more than four single-sided pages including all figures.
+
+\end{abstract}
+
+
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Writing Papers in the Physics Community}
+
+An important part of your education as a physicist is learning to
+use standard tools which enable you to share your work with
+others. In Junior Lab, we will instruct you in the use of \LaTeX
+ on your own personal computer to write scientific papers in
+a widely accepted professional style. This source file
+(sample-paper.tex) for this document should be used as a template
+for your Junior Lab papers. Spending a few hours studying and
+altering this document will allow you to develop sufficient
+mastery of \LaTeX  to easily generate all manner of technical
+documents.
+
+In order to make .tex documents you will need to install \LaTeX.
+Creating a .tex file is easiest if you also use a LaTex editor. To find 
+the version of \LaTeX for your operating system go to http://latex-project.org.
+There are several free editors; TexMaker is a \LaTeX editor 
+available for free at http://www.xm1math.net/texmaker/ for the WIndow,
+MacOSx, and Linux platforms. You 
+can also try MiKTeX (pronounced \emph{mik-tech} for the Windows platform,
+a freely available implementation of TeX and related programs
+available from \url{www.miktex.org}. Note that MiKTeX itself runs
+from a command line prompt and is not terribly convenient. Once you've installed 
+the above software, you can obtain
+this .tex file on http://www.phys.uh.edu/~rforrest/ and put it on your
+computer in order to `rebuild' this document from scratch.  
+
+If you wish to view postscript files under Windows, we
+suggest downloading and installing Ghostscript available from
+\url{www.cs.wisc.edu/~ghost}.
+
+The introduction section of any paper should succinctly report 
+the motivation, purpose and relevant background to the experiment.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Guidelines for Good Writing \cite{pritchard1990}}
+
+The essence of expository writing is the communication of
+understanding through a clear and concise presentation of
+predominately factual material. Most people cannot compose
+successful expository prose unless they put the need to communicate
+foremost among their priorities. Two things predominate in
+generating understanding in the reader:
+\begin{enumerate}
+\item ORGANIZATION: The reader must be provided with an overview or
+outline, know how each fact that he reads fits into that overall
+picture, and he must be alerted if it is an especially important
+fact. Furthermore, the facts must be presented in a logical order
+(so that fact 17 is not important for understanding fact 12).
+
+\item UNIFORM DEPTH of PRESENTATION: Bearing in mind the preexisting
+knowledge of the reader, the writer must budget the length of
+discussion allotted to each topic in proportion to its importance.
+
+\end{enumerate}
+
+Of course clarity of presentation and elegance of explanation will
+greatly enhance the ease and pleasure of understanding; still, a
+murky explanation can be fairly useful if the reader has been told
+what he is reading about and where it fits into the overall scheme
+of things - especially if the reader is familiar with the general
+subject matter under discussion.
+
+The Junior lab writeup is one of the few opportunities
+undergraduates are given to practice technical writing. Thus we urge
+you to concentrate on your overall presentation, not only on the
+facts themselves. We strongly recommend that you:
+\begin{enumerate}
+\item Base your report on an outline.
+\item Begin each paragraph with a topic sentence which expresses the
+main area of concern and the main conclusion of the paragraph. Put
+less important material later in the paragraph.
+\end{enumerate}
+
+Point 2 is frequently absent in reports; they are your
+mechanism for telling the reader what the topic under discussion is
+and where it fits into the overall picture.
+
+You can check your topic sentences by reading them in order (i.e.
+omit all the following sentences in each paragraph) - this should
+give a fair synopsis of your paper.
+
+If you are individually writing up results you obtained with a
+partner, use we and I appropriately.
+
+Use the past tense for your procedure and analysis, the past perfect
+for preparation and the present for emphasis or conclusions, e.g.
+Since we had previously installed Matlab, we quickly concluded that
+electrons are waves.
+
+\begin{enumerate}
+\item Be sure your Figures have comprehensible captions.
+
+\item Make a complete estimate of your errors (not just statistical) - even
+if it's crude.
+
+\item Trace origin of formulae you use (eg. Moseley's Law) to well known
+physics (in this case to the Bohr atom) - don't derive, just
+indicate what new assumptions are needed.
+\end{enumerate}
+
+Please consult the UH  Writing 
+Center's web page at \url{http://www.uh.edu/writecen} and the UH Library Phys 3313/3214 
+Research Guide at \url{http://guides.lib.uh.edu/phys3313/}  for further
+guidance in all aspects of writing, style and to make appointments
+with consultants for free advice.  
+
+{\bf Lastly: Remember to proofread your paper for spelling and grammar
+ mistakes.  Few things are as offensive to a reviewer as careless
+ writing and such mistakes will count against you!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Theory}
+
+The report should be type-written in a form that would be suitable
+for submission as a manuscript for publication in a professional
+journal such as the American Journal of Physics.  One helpful website is the American 
+Institue of Physics Preparing you Manuscript page at
+\url{https://publishing.aip.org/authors/preparing-your-manuscript}.  Figures (created as PDF files)
+should be inserted into the text in their natural positions. The
+body of the summary should include a discussion of the theoretical
+issues addressed by the experiment.  This should be done at a level
+so that another student could follow your development.
+
+\subsection{Typesetting Mathematics}
+
+One of the great powers of \LaTeX is it's ability to typeset all
+manner of mathematical expressions.  While it does take a short
+while to get used to the syntax, it will soon become second nature.
+Numbered, single-line equations are the most common type of equation
+in \textit{Junior Lab papers} and are usually referenced in the
+text; e.g. see Equation~(\ref{eq:first-equation}).
+%
+\begin{equation}
+   \chi_+(p)\alt{\bf [}2|{\bf p}|(|{\bf p}|+p_z){\bf ]}^{-1/2}
+   \left(
+   \begin{array}{c}
+      |{\bf p}|+p_z\\
+      px+ip_y
+   \end{array}\right)
+\,. \label{eq:first-equation}
+\end{equation}
+%
+% Be sure there is NO EMPTY LINE after \end{quation} and before the
+% following lines, if you do not want a new paragraph to start there
+% (and be indented).
+%
+Mathematics can also be placed directly in the text using
+delimeters: $\vec{\psi_1} = |\psi_1\rangle \equiv c_0|0\rangle +
+c_1|1\rangle \chi^2 \approx
+\prod\sum\left[\frac{y_i-f(x_i)}{\sigma_i}\right]^2 |\psi_1\rangle
+\sim \lim_{\mu \rightarrow \infty}p(x;\mu) \geq \frac{1}{\sqrt{2 \pi
+\mu}} e^{-(x-\mu)^2 / 2\mu}P(x) \ll \int_{-\infty}^x p(x')dx'a
+\times b \pm c \Rightarrow \nabla \hbar$.
+
+Infrequently, you may wish to typeset long equations which span more
+than one line of a two-column page.  A good solution is to split-up
+the equation into multiple lines and label all with a single
+equation number, like in Equation~\ref{eq:multilineeq}.  See the
+\LaTeX file to see how this is done.
+%
+\begin{eqnarray}
+  \sum \vert M^{\text{viol}}_g \vert ^2
+   &=&  g^{2n-4}_S(Q^2)~N^{n-2} (N^2-1)
+\nonumber
+\\
+   &&   \times \left( \sum_{i<j}\right) \sum_{\text{perm}}
+            \frac{1}{S_{12}}  \frac{1}{S_{12}} \sum_\tau c^f_\tau
+\,.
+\label{eq:multilineeq}
+\end{eqnarray}
+
+Finally, it is often useful to group related equations to denote their
+relationship, e.g. in a derivation.  Enclosing single-line and
+multiline equations in \verb+\begin{subequations}+ and
+\verb+\end{subequations}+ will produce a set of equations that are
+``numbered'' with letters, as shown in Equations.~(\ref{subeq:1}) and
+(\ref{subeq:2}) below:
+\begin{subequations}
+\label{eq:whole}
+\begin{equation}
+  \left\{
+      abc123456abcdef\alpha\beta\gamma\delta1234556\alpha\beta
+       \frac{1\sum^{a}_{b}}{A^2}
+  \right\}
+%
+\,\label{subeq:1}
+\end{equation}
+\begin{eqnarray}
+  {\cal M} &=& ig_Z^2(4E_1E_2)^{1/2}(l_i^2)^{-1}
+                (g_{\sigma_2}^e)^2\chi_{-\sigma_2}(p_2)
+\nonumber\\
+  &&\times [\epsilon_i]_{\sigma_1}\chi_{\sigma_1}(p_1).\label{subeq:2}
+\end{eqnarray}
+\end{subequations}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiment}
+
+This section describes the main components of the apparatus,
+procedures used and always makes reference to a figure(s) which
+contains a block diagram or schematic of the apparatus and perhaps
+includes the most important signal processing steps. {\bf The figure
+should be referenced as early as possible in this section with the
+placement of the figure as close to the descriptive text as is
+possible.}  It is usually necessary to place additional information
+within the figures themselves or in their captions for which there is
+no room in the main body of text.  This will help you stay within the
+two page limit.
+
+{\bf Example first sentence of an experimental section}
+The experimental apparatus consists of a specially prepared chemical
+sample containing $^{13}$CHCl$_3$, a NMR spectrometer, and a control
+computer, as shown in Figure~\ref{fig:samplefig}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Note, when including figures in a TeX document, we suggest you first create the figures as
+% PDF files and then include them in the following way - without the .pdf suff9ix!)
+%
+% This allows the standard package PDFLaTeX to compile the entire document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}
+\includegraphics[width=8cm]{chaos_fig2}
+\caption{This is a schematic of the main apparatus.  Use the caption
+space to elaborate on specific issues or complication, or operating
+procedures.  Especially valuable given the limited about of space in
+the main body of text.  The size of this graphic was set by the width
+command, the aspect ratio defaults to 1.0 if the height is not also
+set. \label{fig:samplefig}}
+\end{figure}
+
+Graphics, such as Figure~\ref{fig:calibration} should be well thought
+out and crafted to maximize their information content while retaining
+clarity of expresson!  If you `reuse' graphics from your paper in oral
+presentation slides, make sure to increase the size of all the fonts
+so that they remain legible from 20 feet away!
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results, Analysis, and Discussion}
+
+All papers should have at least one graphic showing some assemblage of
+raw data, see for example Figure~\ref{fig:panel2x2}. There should also
+be one graphic which summarizes the experimental data, and which
+conveys primary finding(s) of the laboratory exercise.  You may find
+that you need more but these two should be a minimum.  Finally, it can
+be useful in some circumstances to have a table of results, see
+Table~\ref{tab:table1}
+
+
+\begin{figure}[h]
+\includegraphics[width=0.45\textwidth]{thermocalibration}
+\caption{Sample figure describing a set of data, fit procedures and
+results. Use the caption space to provide more details about the
+fitting procedure, results or implications if you do not have
+sufficient room in the main body of text.  The size of this graphic
+was set relative to the textwidth, see the TeX file for details.}
+\label{fig:calibration}
+\end{figure}
+
+
+\begin{table}[h]
+\caption{\label{tab:table1}A example table with footnotes.  Note that several 
+entries share the same
+footnote. Inspect the \LaTeX\ input for this table to see
+exactly how it is done.}
+\begin{ruledtabular}
+\begin{tabular}{cccccccc}
+ &$r_c$ (\AA)&$r_0$ (\AA)&$\kappa r_0$&
+ &$r_c$ (\AA) &$r_0$ (\AA)&$\kappa r_0$\\
+\hline
+Cu& 0.800 & 14.10 & 2.550 &Sn\footnotemark[1] & 0.680 & 1.870 & 3.700 \\
+Ag& 0.990 & 15.90 & 2.710 &Pb\footnotemark[1] & 0.450 & 1.930 & 3.760 \\
+Tl& 0.480 & 18.90 & 3.550 & & & & \\
+\end{tabular}
+\end{ruledtabular}
+\footnotetext[1]{Here's the first, from Ref.~\cite{bevington2003}.}
+\end{table}
+
+Try to avoid the temptation to inundate the reader with too many
+graphics.  It is worth spending some time thinking of how best to
+present information rather than just creating graph after graph of
+uninformative data.  All figures and tables must be properly
+captioned.  Material and ideas drawn from the work of others must be
+properly cited, and a list of references should be included at the end
+of the text but before the graphics.
+
+
+
+\begin{figure*}[htb]
+\includegraphics[angle=0,width=10cm]{paperfig3}
+\caption{Sample paneled figure created in Matlab using the
+subplot(2,2,x) command where x is the element of the plot array into
+which all subsequent commands such as plot(x,y) and xlabel('Volts'),
+etc. get processed.  Use the caption space to provide more details
+about the data, their acquisition or how they were processed if you do
+not have sufficient room in the main body of text.  Figures can be
+rotated using the angle command, see the TeX file for details.  If a
+figure is to be placed after the main text use the ``figure*'' option
+to make it extend over two columns, see the \LaTeX file for how this
+was done.}
+\label{fig:panel2x2}
+\end{figure*}
+
+
+If circumstances in an experiment are such that you cannot get your
+own data (e.g. broken equipment, bad weather), {\bf you may use
+somebody else's data provided you acknowledge it}.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+And finally, conclusions.  Remember to report all your results with
+appropriate significant digits, units, and uncertainties, e.g. Q =
+(2.12 $\pm$ 0.06) disintegrations s$^{-1}$.  It is often very useful
+to express the quality of your result by measuring how many standard
+deviations it lies from other published values.
+
+It is worth mentioning here some thoughts on {\bf ethics and writing
+in Science}.
+
+When you read the report of a physics experiment in a reputable
+journal (e.g. Physical Review Letters) you can generally assume it
+represents an honest effort by the authors to describe exactly what
+they observed. You may doubt the interpretation or the theory they
+create to explain the results. But at least you trust that if you
+repeat the manipulations as described, you will get essentially the
+same experimental results.
+
+Nature is the ultimate enforcer of truth in science. If subsequent
+work proves a published measurement is wrong by substantially more
+than the estimated error limits, a reputation shrinks. If fraud is
+discovered, a career may be ruined. So most professional scientists
+are very careful about the records they maintain and the results and
+errors they publish.
+
+In keeping with the spirit of trust in science, Junior Lab instructors
+will assume that what you record in your lab book and report in your
+written and oral presentations is exactly what you have observed.
+
+{\bf Fabrication or falsification of data, using the results of
+another person's work without acknowledgement, or copying from {\em
+``living group files''} are intellectual crimes as serious as
+plagiarism, and possible causes for dismissal from the Institute.}
+
+{\bf The acknowledgement of other people's data also applies to the use
+of other people's rhetoric.} The appropriate way to incorporate an
+idea which you have learned from a textbook or other reference is to
+study the point until you understand it and then put the text aside
+and state the idea in your own words.
+
+One often sees, in a scientific journal, phrases such as ``Following
+Bevington and Melissinos \cite{bevington2003, melissinos1966} ...''
+This means that the author is following the ideas or logic of these
+authors and not their exact words.
+
+If you do choose to quote material, it is not sufficient just to
+include the original source among the list of references at the end of
+your paper. If a few sentences or more are imported from another
+source, that section should be
+
+\begin{quote}indented on both sides or enclosed in
+quotes, and attribution must be given immediately in the form of a
+reference note.\cite{melissinos2003}
+\end{quote}
+
+If you have any question at all about attribution of sources, please
+see you section instructor.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{12pt}
+\section{References}
+
+Bibliographies are very important in Junior Lab papers.  Beyond the
+requisite citation of source material, they provide evidence of your
+investigations beyond the narrow scope of the labguide, something
+explicitly required of all Junior Lab students!  Good bibliograhies
+are doubly important in the real world where they are very (often
+the most) important sources of information for researchers entering
+the field.  Bibliographic entries may be made either in the `.tex'
+file itself or within a separate `.bib' file which gets attached
+during process of building a final PDF document.  This latter method
+is the preferred method and is then one used in this template by
+default.  An example of the alternative style, currently commented
+out,  is contained in the `.tex' source file.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\bibliographystyle{prsty}
+\begin{thebibliography}{99}
+\bibitem{pritchard1990}Professor D. Pritchard, Personal Communication
+\bibitem{melissinos1966}Melissinos, A.C., Experiments in Modern
+  Physics - 1st Edition, Academic Press,  [1966]
+\bibitem{melissinos2003}Melissinos, A.C., Napolitano, J.,  Experiments in Modern
+  Physics - 2nd Edition, Academic Press,  [2003]
+\bibitem{bevington2003}Bevington and Robinson, Data Reduction and
+  Error Analysis for the Physical Sciences - 3rd Edition, McGraw-Hill,
+  [2003]
+
+\end{thebibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{acknowledgments} FAC gratefully acknowledges Dr. Francine Brown for
+her early reviews of this manuscript.
+\end{acknowledgments}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}
