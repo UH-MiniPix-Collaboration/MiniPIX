@@ -17,8 +17,8 @@
 %%
 %% $Id: elsarticle-template-1-num.tex 149 2009-10-08 05:01:15Z rishi $
 %% $URL: http://lenova.river-valley.com/svn/elsbst/trunk/elsarticle-template-1-num.tex $
-%%
-\documentclass[preprint,12pt]{elsarticle}
+
+\documentclass[final,1p, times, twocolumn]{elsarticle}
 
 %% Use the option review to obtain double line spacing
 %% \documentclass[preprint,review,12pt]{elsarticle}
@@ -48,6 +48,9 @@
 %% provided with \biboptions{...} command. Following options are
 %% valid:
 
+\usepackage{caption}
+\usepackage{subcaption}
+
 %%   round  -  round parentheses are used (default)
 %%   square -  square brackets are used   [option]
 %%   curly  -  curly braces are used      {option}
@@ -68,6 +71,8 @@
 %% \usepackage{authblk}
 %% authors package
 
+
+\graphicspath{{../figures/}}
 \journal{Nuclear Instruments and Methods in Physics Research}
 
 \begin{document}
@@ -200,6 +205,30 @@ All of our data goes here, straight up with no analysis.  If it is a figure, you
 
 If it is a table, you need to include a title above the table.  You must also describe the table before inserting it.  
 
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=.5]{dva-cropped.pdf}
+  \caption{Dose rate in silicon vs. altitude.}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=.5]{hva-cropped.pdf}
+  \caption{Detector Hits vs. altitude.}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{Not sure what to put here yet.}
+\label{fig:test}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\caption{Cluster Type Counts vs. altitude.}
+\includegraphics[scale=.5]{ctva-cropped.pdf}
+\end{figure}
+
 \section{Discussion}
 \label{Discussion}
 \subsection{System Performance}
@@ -252,7 +281,7 @@ STEM Center (need official title and name)
 
 %\bibitem{SORA}S.A. Garcia Morelos, F.Brooks, S.Oliver, A.Walker, K.D. Portillo, R.B. Masek, D.Mroczek, D.Pena, J.Juarez, A.Cruz, D. Henandez, S.George, D. Pattison, A.L.Renshaw. \textit{Scientific Report for the UH Team.} SORA 2017 Mission Webpage. \textit{http://laspace.lsu.edu/hasp/groups/Payload.php?py=2017&pn=10}.
 
-\bibitem{silicon_sensor}MiniPIX - Miniaturized Portable USB Photon Counting Camera. (n.d.). Retrieved February 02, 2017, from \textit{http://advacam.com/camera/minipix}.
+\bibitem{minipix}MiniPIX - Miniaturized Portable USB Photon Counting Camera. (n.d.). Retrieved February 02, 2017, from \textit{http://advacam.com/camera/minipix}.
 
 %\bibitem{LSU}
 %  Christner, B., Alleman, M., Bryan, N., Burke, S., Guzik, T.G., Granger, D., King, G. (2013) \textit{LSU HASP2013 PDF. Baton Rouge: Louisiana Space Consortium}.
