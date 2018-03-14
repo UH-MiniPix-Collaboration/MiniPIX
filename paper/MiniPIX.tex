@@ -43,7 +43,7 @@
 %% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
 %% for the whole article with \linenumbers after \end{frontmatter}.
 \usepackage{lineno}
-
+\usepackage{siunitx}
 %% natbib.sty is loaded by default. However, natbib options can be
 %% provided with \biboptions{...} command. Following options are
 %% valid:
@@ -90,6 +90,8 @@
 %%
 %% \title{Title\tnoteref{label1}}
 %% \tnotetext[label1]{}
+
+% To avoid any authorship arguments I would suggest we order authors in alphabetical order by last name. Just a thought.
 \author{S.~A.~Garcia~Morelos\corref{cor1}\fnref{label2}}
 \author{F.~Brooks\corref{cor2}\fnref{label3}}
 \author{S.~Oliver\corref{cor3}\fnref{label4}}
@@ -130,11 +132,7 @@
 
 \begin{abstract}
 
-The resutls from the radiation experiment in the SORA(SOURCE) (Stratospheric Organisms and Radiation Analyzer) high altitude balloon flight are presented.  The SORA payload included a semiconductor pixel detector, the MiniPIX(SOURCE), for cosmic ray studies and imaging in the stratosphere at an altitude of 30 kilometers.  The MiniPIX was interfaced with a low-powered linux computer, a Raspberry Pi 3 (SOURCE).  The code and interface were based on S.George (SOURCE) work with the MiniPIX and TimePIX devices.  The MiniPIX was set to TOT (time over threshold mode) and monitored cosmic radiation for a total flight time of (HOURS).  Overall, the SORA payload was a testbed for this low cost setup for future satellite missions.
-WIP!!!
-%% Text of abstract
-%Suspendisse potenti. Suspendisse quis sem elit, et mattis nisl. Phasellus consequat erat eu velit rhoncus non pharetra neque auctor. Phasellus eu lacus quam. Ut ipsum dolor, euismod aliquam congue sed, lobortis et orci. Mauris eget velit id arcu ultricies auctor in eget dolor. Pellentesque suscipit adipiscing sem, imperdiet laoreet dolor elementum ut. Mauris condimentum est sed velit lacinia placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam diam metus, pharetra vitae euismod sed, placerat ultrices eros. Aliquam tincidunt dapibus venenatis. In interdum tellus nec justo accumsan aliquam. Nulla sit amet massa augue.
-
+The results of the SORA payload during the 2017 HASP stratospheric ballooon flight are presented. Let's write the paper first then finish the abstract.
 \end{abstract}
 
 %Required Structure: https://www.elsevier.com/journals/nuclear-instruments-and-methods-in-physics-research-section-a-accelerators-spectrometers-detectors-and-associated-equipment/0168-9002/guide-for-authors
@@ -143,7 +141,7 @@ WIP!!!
 %Highlights are a short collection of bullet points that convey the core findings of the article. Highlights are optional and should be submitted in a separate editable file in the online submission system. Please use 'Highlights' in the file name and include 3 to 5 bullet points (maximum 85 characters, including spaces, per bullet point). You can view example Highlights on our information site.
 
 \begin{keyword}
-MiniPIX \sep CERN \sep HASP \sep LSU \sep SORA \sep NASA \sep Radiation \sep Cosmic \sep Houston \sep UH
+MiniPIX \sep TimePIX \sep HASP \sep SORA \sep Cosmic Radiation \sep Stratospheric Balloon \sep Dosimetry
 %% keywords here, in the form: keyword \sep keyword
 
 %% MSC codes here, in the form: \MSC code \sep code
@@ -179,85 +177,38 @@ MiniPIX \sep CERN \sep HASP \sep LSU \sep SORA \sep NASA \sep Radiation \sep Cos
 %% main text
 \section{Introduction}
 \label{Introduction}
+% I need to put all the citations in the bibliography but the links are there
+During the HASP 2017\cite{hasp} flight the MiniPIX hybrid pixel detector\cite{minipix} was used to measure the levels of cosmic radiation experienced by the SORA payload\cite{sora}. Presented in this paper are the measurements taken using the MiniPIX during the aforementioned HASP stratospheric balloon flight. The MiniPIX internally utilizes a TimePIX silicon detector originally designed at CERN\cite{cern} and communicates over a USB interface provided by ADVACAM\cite{advacam}. The detector was interfaced with a Raspberry PI 3(RPI3) and operated autonomously in time over threshhold mode allowing each pixel to act as a Wilkinson type ADC allowing the measurement of deposited energy on a per pixel basis. Data was collected during the duration of the HASP 2017 flight that launched from Fort Sumner New Mexico on August 4th 2017. The HASP payload ascended to a float altitude of $\sim{}\SI{35.5}{\kilo\meter}$ that was maintained for $\sim{}10.5$ hours. During the duration of the flight the payload drifted west a total ground distance of \SI{580}{\kilo\meter} and was recovered just north of the Apache-Sitgreaves National Forest in Arizona.
 
-State the objectives of the work and provide an adequate background, avoiding a detailed literature survey or a summary of the results.
 
-%% Study the cosmic and terrestrial radiation in which extremophiles may reside.  Overall, study cosmic radiation at altitudes of 36 km to 40 km.
+\section{Background}
+\label{Background}
+% I suggest we discuss briefly Timepix detectors use on the ISS and other places for space radiation dosimetry and particle identification. We can also talk a bit about our motivations of studying cosmic rays on commercial airline flights.
 
-Maecenas cite{Smith:2012qr} fermentum cite{Smith:2013jd} urna ac sapien tincidunt lobortis. Nunc feugiat faucibus varius. Ut sed purus nunc. Ut eget eros quis lectus mollis pharetra ut in tellus. Pellentesque ultricies velit sed orci pharetra et fermentum lacus imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse commodo ultrices mauris, condimentum hendrerit lorem condimentum et. Pellentesque urna augue, semper et rutrum ac, consequat id quam. Proin lacinia aliquet justo, ut suscipit massa commodo sit amet. Proin vehicula nibh nec mauris tempor interdum. Donec orci ante, tempor a viverra vel, volutpat sed orci.
+\section{Experiment Design}
+\label{Experiment Design}
+% This should be fairly brief, the system is not particularly complex.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque quis interdum velit. Nulla tincidunt sem quis nisi molestie nec hendrerit nulla interdum. Nunc at lectus at neque dapibus dapibus sit amet in massa. Nam ut nisl in diam consectetur dignissim. Sed lacinia diam id nunc suscipit vitae semper lorem semper. In vehicula velit at tortor fringilla elementum aliquam erat blandit. Donec pretium libero et neque vehicula blandit. Curabitur consequat interdum sem at ultrices. Sed at tincidunt metus. Etiam vulputate, lacus eget fermentum posuere, ante mi dignissim augue, et ultrices felis tortor sed nisl.
+\subsection{System Design}
+% RPI interface to MiniPIX, heatsink design etc.
+\subsection{Configuration and Calibration}
+% Device parameters, threshold, bias voltage, shutter time etc.
 
-\begin{itemize}
-\item Bullet point one
-\item Bullet point two
-\end{itemize}
-
-\begin{enumerate}
-\item Numbered list item one
-\item Numbered list item two
-\end{enumerate}
-
-\subsection{Subsection One}
-
-Quisque elit ipsum, porttitor et imperdiet in, facilisis ac diam. Nunc facilisis interdum felis eget tincidunt. In condimentum fermentum leo, non consequat leo imperdiet pharetra. Fusce ac massa ipsum, vel convallis diam. Quisque eget turpis felis. Curabitur posuere, risus eu placerat porttitor, magna metus mollis ipsum, eu volutpat nisl erat ac justo. Nullam semper, mi at iaculis viverra, nunc velit iaculis nunc, eu tempor ligula eros in nulla. Aenean dapibus eleifend convallis. Cras ut libero tellus. Integer mollis eros eget risus malesuada fringilla mattis leo facilisis. Etiam interdum turpis eget odio ultricies sed convallis magna accumsan. Morbi in leo a mauris sollicitudin molestie at non nisl.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{l l l}
-\hline
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\hline
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\hline
-\end{tabular}
-\caption{Table caption}
-\end{table}
-
-\subsection{Subsection Two}
-
-Donec eget ligula venenatis est posuere eleifend in sit amet diam. Vestibulum sollicitudin mauris ac augue blandit ultricies. Nulla facilisi. Etiam ut turpis nunc. Praesent leo orci, tincidunt vitae feugiat eu, feugiat a massa. Duis mauris ipsum, tempor vel condimentum nec, suscipit non mi. Fusce quis urna dictum felis posuere sagittis ac sit amet erat. In in ultrices lectus. Nulla vitae ipsum lectus, a gravida erat. Etiam quam nisl, blandit ut porta in, accumsan a nibh. Phasellus sodales euismod dolor sit amet elementum. Phasellus varius placerat erat, nec gravida libero pellentesque id. Fusce nisi ante, euismod nec cursus at, suscipit a enim. Nulla facilisi.
-
-%\begin{figure}[h]
-%\centering\includegraphics[width=0.4\linewidth]{placeholder}
-%\caption{Figure caption}
-%\end{figure}
-
-Integer risus dui, condimentum et gravida vitae, adipiscing et enim. Aliquam erat volutpat. Pellentesque diam sapien, egestas eget gravida ut, tempor eu nulla. Vestibulum mollis pretium lacus eget venenatis. Fusce gravida nisl quis est molestie eu luctus ipsum pretium. Maecenas non eros lorem, vel adipiscing odio. Etiam dolor risus, mattis in pellentesque id, pellentesque eu nibh. Mauris nec ante at orci ultricies placerat ac non massa. Aenean imperdiet, ante eu sollicitudin vestibulum, dolor felis dapibus arcu, sit amet fermentum urna nibh sit amet mauris. Suspendisse adipiscing mollis dolor quis lobortis.
-
-\begin{equation}
-\label{eq:emc}
-e = mc^2
-\end{equation}
-
-\section{Methods}
-\label{Methods}
-
-Reference to Section ref{S:1}. Etiam congue sollicitudin diam non porttitor. Etiam turpis nulla, auctor a pretium non, luctus quis ipsum. Fusce pretium gravida libero non accumsan. Donec eget augue ut nulla placerat hendrerit ac ut mi. Phasellus euismod ornare mollis. Proin tempus fringilla ultricies. Donec pretium feugiat libero quis convallis. Nam interdum ante sed magna congue eu semper tellus sagittis. Curabitur eu augue elit.
-
-Aenean eleifend purus et massa consequat facilisis. Etiam volutpat placerat dignissim. Ut nec nibh nulla. Aliquam erat volutpat. Nam at massa velit, eu malesuada augue. Maecenas sit amet nunc mauris. Maecenas eu ligula quis turpis molestie elementum nec at est. Sed adipiscing neque ac sapien viverra sit amet vestibulum arcu rhoncus.
-
-Vivamus pharetra nibh in orci euismod congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque lacus diam, congue vel laoreet id, iaculis eu sapien. In id risus ac leo pellentesque pellentesque et in dui. Etiam tincidunt quam ut ante vestibulum ultricies. Nam at rutrum lectus. Aenean non justo tortor, nec mattis justo. Aliquam erat volutpat. Nullam ac viverra augue. In tempus venenatis nibh quis semper. Maecenas ac nisl eu ligula dictum lobortis. Sed lacus ante, tempor eu dictum eu, accumsan in velit. Integer accumsan convallis porttitor. Maecenas pretium tincidunt metus sit amet gravida. Maecenas pretium blandit felis, ac interdum ante semper sed.
-
-In auctor ultrices elit, vel feugiat ligula aliquam sed. Curabitur aliquam elit sed dui rhoncus consectetur. Cras elit ipsum, lobortis a tempor at, viverra vitae mi. Cras sed urna sed eros bibendum faucibus. Morbi vel leo orci, vel faucibus orci. Vivamus urna nisl, sodales vitae posuere in, tempus vel tellus. Donec magna est, luctus non commodo sit amet, placerat et enim.
-
-\section{Results}
-\label{Results}
+\section{Data Analysis}
+\label{Data Analysis}
 All of our data goes here, straight up with no analysis.  If it is a figure, you need a figure name underneath and you must describe it in the following paragraph.  
 
 If it is a table, you need to include a title above the table.  You must also describe the table before inserting it.  
 
-\section{Analysis}
-\label{Analysis}
-
 \section{Discussion}
 \label{Discussion}
-
+\subsection{System Performance}
+\subsection{Results}
+% Discuss dose and particle count measurements as they relate to classical theory
 \section{Conclusion}
 \label{Conclusion}
-In auctor ultrices elit, vel feugiat ligula aliquam sed. Curabitur aliquam elit sed dui rhoncus consectetur. Cras elit ipsum, lobortis a tempor at, viverra vitae mi. Cras sed urna sed eros bibendum faucibus. Morbi vel leo orci, vel faucibus orci. Vivamus urna nisl, sodales vitae posuere in, tempus vel tellus. Donec magna est, luctus non commodo sit amet, placerat et enim.
+% Overall, the device performed adequately and is potentially suitable for future applications in other areas
+% Discuss future applications of the MiniPIX for compact, cheap and accurate(?) dosimeters on commercial airline flights
 
 \section{Acknowledgements}
 \label{Acknowledgements}
@@ -420,3 +371,5 @@ STEM Center (need official title and name)
 %%
 %% End of file `elsarticle-template-1-num.tex'.
               
+\grid
+\grid
