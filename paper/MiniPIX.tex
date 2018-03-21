@@ -170,9 +170,6 @@ MiniPIX \sep TimePIX \sep HASP \sep SORA \sep Cosmic Radiation \sep Stratospheri
 %%km (kilometers)
 %%m (meters)
 
-%Acknowledgements
-%Collate acknowledgements in a separate section at the end of the article before the references and do not, therefore, include them on the title page, as a footnote to the title or otherwise. List here those individuals who provided help during the research (e.g., providing help during the assembly process, language help, writing assistance or proof reading the article, etc.).
-
 \end{frontmatter}
 
 %%
@@ -180,76 +177,6 @@ MiniPIX \sep TimePIX \sep HASP \sep SORA \sep Cosmic Radiation \sep Stratospheri
 %%
 \linenumbers
 
-%% main text
-\section{Introduction}
-\label{Introduction}
-% I need to put all the citations in the bibliography but the links are there
-During the HASP 2017\cite{hasp} flight the MiniPIX hybrid pixel detector\cite{minipix} was used to measure the levels of cosmic radiation experienced by the SORA payload\cite{sora}. Presented in this paper are the measurements taken using the MiniPIX during the aforementioned HASP stratospheric balloon flight. The MiniPIX internally utilizes a TimePIX silicon detector originally designed at CERN\cite{cern} and communicates over a USB interface provided by ADVACAM\cite{advacam}. The detector was interfaced with a Raspberry PI 3(RPI3) and operated autonomously in time over threshhold mode allowing each pixel to act as a Wilkinson type ADC allowing the measurement of deposited energy on a per pixel basis. Data was collected during the duration of the HASP 2017 flight that launched from Fort Sumner New Mexico on August 4th 2017. The HASP payload ascended to a float altitude of $\sim{}\SI{35.5}{\kilo\meter}$ that was maintained for $\sim{}10.5$ hours. During the duration of the flight the payload drifted west a total ground distance of \SI{580}{\kilo\meter} and was recovered just north of the Apache-Sitgreaves National Forest in Arizona.
-
-
-\section{Background}
-\label{Background}
-Cosmic radiation 
-% I suggest we discuss briefly Timepix detectors use on the ISS and other places for space radia
-tion dosimetry and particle identification. We can also talk a bit about our motivations of studying cosmic rays on commercial airline flights.
-
-\section{Experiment Design}
-\label{Experiment Design}
-% This should be fairly brief, the system is not particularly complex.
-
-\subsection{System Design}
-% RPI interface to MiniPIX, heatsink design etc.
-\subsection{Configuration and Calibration}
-% Device parameters, threshold, bias voltage, shutter time etc.
-
-\section{Data Analysis}
-\label{Data Analysis}
-All of our data goes here, straight up with no analysis.  If it is a figure, you need a figure name underneath and you must describe it in the following paragraph.  
-
-If it is a table, you need to include a title above the table.  You must also describe the table before inserting it.  
-
-\begin{figure}
-\centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[scale=.5]{dva-cropped.pdf}
-  \caption{Dose rate in silicon vs. altitude.}
-  \label{fig:sub1}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[scale=.5]{hva-cropped.pdf}
-  \caption{Detector Hits vs. altitude.}
-  \label{fig:sub2}
-\end{subfigure}
-\caption{Not sure what to put here yet.}
-\label{fig:test}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-\caption{Cluster Type Counts vs. altitude.}
-\includegraphics[scale=.5
-]{ctva-cropped.pdf}
-\end{figure}
-
-\section{Discussion}
-\label{Discussion}
-\subsection{System Performance}
-\subsection{Results}
-% Discuss dose and particle count measurements as they relate to classical theory
-\section{Conclusion}
-\label{Conclusion}
-% Overall, the device performed adequately and is potentially suitable for future applications in other areas
-% Discuss future applications of the MiniPIX for compact, cheap and accurate(?) dosimeters on commercial airline flights
-
-\section{Acknowledgements}
-\label{Acknowledgements}
-This will be a list populated by all the people that helped contribute to the project at one point or the other.  This includes those that helped us build briefly during the summer, and also those that helped review our paper.
-
-\section{Funding Sources}
-\label{funding}
-STEM Center (need official title and name)
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
@@ -266,153 +193,36 @@ STEM Center (need official title and name)
 %%   \cite[chap. 2]{key} ==>>  [#, chap. 2]
 %%   \citet{key}         ==>>  Author [#]
 
-%% References with bibTeX database:
-%%%%%%%%
-%%%%%%%%\bibliographystyle{model1-num-names}
-%%%%%%%%\bibliography{sample.bib}
+%---Introduction
+\input{Introduction}
 
-%% Authors are advised to submit their bibtex database files. They are
-%% requested to list a bibtex style file in the manuscript if they do
-%% not want to use model1-num-names.bst.
+%---Background
+\input{Background}
 
-%% References without bibTeX database:
+%---Experiment Design
+\input{Design}
 
-\begin{thebibliography}{00}
+%---Data Analysis
+\input{Analysis}
 
-%% \bibitem must have the following form:
-%%   \bibitem{key}...
-%%
+%---Discussion
+\input{Discussion}
 
-%\bibitem{SORA}S.A. Garcia Morelos, F.Brooks, S.Oliver, A.Walker, K.D. Portillo, R.B. Masek, D.Mroczek, D.Pena, J.Juarez, A.Cruz, D. Henandez, S.George, D. Pattison, A.L.Renshaw. \textit{Scientific Report for the UH Team.} SORA 2017 Mission Webpage. \textit{http://laspace.lsu.edu/hasp/groups/Payload.php?py=2017&pn=10}.
+%---Conclusion
+\input{Conclusion}
 
-\bibitem{minipix}MiniPIX - Miniaturized Portable USB Photon Counting Camera. (n.d.). Retrieved February 02, 2017, from \textit{http://advacam.com/camera/minipix}.
+%---Acknowledgements
+\input{Acknowledgements}
 
-\bibitem{timepixiss} Stoffle, N., Pinsky, L. et al. Timepix-based radiation environment monitor mea-
-surements aboard the International Space Station. Nucl. Instrum. Methods Phys.
-Res., A, 782 (2015):143.
+%---Funding Sources
+\input{Funding}
 
-\bibitem{aircrewexposure} B.J. Lewis, M.J. McCall, A.R. Green, L.G.I. Bennett, M. Pierre, U.J. Schrewe, K. O'Brien, E. Felsberger; Aircrew Exposure from Cosmic Radiation on Commercial Airline Routes, Radiation Protection Dosimetry, Volume 93, Issue 4, 1 February 2001, Pages 293–314, \url{https://doi-org.ezproxy.lib.uh.edu/10.1093/oxfordjournals.rpd.a006442}
-\bibitem{timepixdosimetry} Carlos Granja, Stanislav Pospisil,
-Quantum dosimetry and online visualization of X-ray and charged particle radiation in commercial aircraft at operational flight altitudes with the pixel detector Timepix,
-Advances in Space Research,
-Volume 54, Issue 2,
-2014,
-Pages 241-251,
-ISSN 0273-1177,
-https://doi.org/10.1016/j.asr.2014.04.006.
-(http://www.sciencedirect.com/science/article/pii/S0273117714002208)
-Keywords: Radiation detection; Radiation exposure at aviation altitudes; Dose equivalent rate; Semiconductor pixel detector; Quantum dosimetry
+%---Appendix
+\input{Appendix}
 
-%\bibitem{LSU}
-%  Christner, B., Alleman, M., Bryan, N., Burke, S., Guzik, T.G., Granger, D., King, G. (2013) \textit{LSU HASP2013 PDF. Baton Rouge: Louisiana Space Consortium}.
-%
-%%\bibitem{SolidWorks}
-%%  SolidWorks 3D CAD software \url{http://www.solidworks.com/}.
-%
-%\bibitem{Extremophiles}
-%  Extremophiles \href{http://www.nytimes.com/2013/02/07/science/living-bacteria-found-deep-under-antarctic-ice-scientists-say.html}{http://www.nytimes.com/2013/02/07/science/living-bacteria-found-deep-\\under-antarctic-ice-scientists-say.html}.
-%
-%\bibitem{canales}
-% Canales D. C. and Ehteshami A., \textit{An attempt to sample atmospheric bacteria}, Houston, TX, 2015, January 11.
-%
-%\bibitem{bexus}
-%Urbar, J., Scheirich, J., Jakubek, J., 2011. Medipix/Timepix cosmic ray tracking on BEXUS stratospheric balloonflights. Nucl. Instrum. Methods A 633, S206-209.
-%	
-%%\bibitem{uv_irradiance}
-%%  Calculating the UV Index. (2016, October 14). Retrieved June 03, 2017, from \url{https://www.epa.gov/sunsafety/calculating-uv-index-0}.
-%
-%%\bibitem{cleanbox}
-%% Clean box material \url{https://www.mcmaster.com/\#uhmw-polyethylene/=1aijn1p}.
-%
-%\bibitem{valve}
-% Valve data sheet \url{http://www.generant.com/Literature/Series\%20VRV\%20Product\%20Literature.pdf}.
-%
-\bibitem{advacam}
-  ADVACAM at \url{http://www.advacam.com}
-%
-%\bibitem{medipix}
-%  Medipix collaboration at \url{https://medipix.web.cern.ch/}.
-%  
-%\bibitem{stuartthesis} 22
-%  George, S., \textit{Dosimetric Applications of Hybrid Pixel Detectors}, University of Wollongong, Australia, 2015.
-%
-%%\bibitem{mpdatasheet}
-%%  ADVACAM, \textit{MINIPIX Version 1.0 Datasheet}, Retrieved from \url{http://www.widepix.cz/files/datasheets/MiniPIX\%20v1.0\%20Datasheet.pdf}.
-%
-%%\bibitem{mpjakubek}
-%%  Jan Jakubek, \textit{Precise energy calibration of pixel detector working in time-over-threshold mode} Institute of Experimental and Applied Physics, Czech Technical University in Prague, Czech Republic, 2011.
-%  
-%
-%    
-%
-%
-%%\bibitem{magnetictool}
-%%  United States National Oceanic and Atmospheric Administration, \textit{Magnetic Field Calculators} [Data sets], Retrieved from \url{https://www.ngdc.noaa.gov/geomag-web/#igrfwmm}.
-%
-%%\bibitem{gorman}
-%%	Gorman, J. (2013, February 06). \textit{Scientists Find Life in the Cold and Dark Under Antarctic Ice.} Retrieved September 15, 2016, from Scientists Find Life in the Cold and Dark Under Antarctic Ice.
-%	
-% 
-% 
-%%\bibitem{pumpsource}
-%%  \url{http://www.knfusa.com/?type=5600&amp;file=2079}.
-%
-%
-%%\bibitem{Horneck}
-%%  Horneck, G. 1993. The Biostack concept and its application in space and at accelerators: studies in Bacillus subtilis spores, p. 99-115. In C. E. Swenberg, G. Horneck, and E. G. Stassinopoulos (ed.), \textit{Biological effects and physics of solar and galactic cosmic radiation}[PDF], part A. Plenum Press, New York, NY. accessed 10/24/16  
-%
-%%\bibitem{Horneck} 
-%%  Horneck, G. 2007. \textit{Space radiation biology}[PDF], p. 243-273. In E. Brinckmann (ed.), Biology in space and life on Earth. Wiley-VCH, Weinheim, Germany. Accessed 10/26/16
-%
-%%\bibitem{Horneck}
-%%  Horneck, G., C. Baumstark-Khan, and G. Reitz. 2002. \textit{ Space microbiology: effects of ionizing radiation on microorganisms in space}[PDF], p. 2988-2996. In G. Bitton (ed.), The encyclopedia of environmental microbiology. John Wiley \& Sons, New York, NY. Accessed 10/30/16
-%
-%%\bibitem{Horneck}
-%%  Horneck, G., C. Baumstark-Khan, and R. Facius. 2006. \textit{Radiation biology}[PDF], p. 292-335. In G. Cl?ment and K. Slenzka (ed.), Fundamentals of space biology. Kluwer Academic Publishers/Springer, Dordrecht, The Netherlands. accessed 11/4/16
-%
-%%\bibitem{Kiefer}
-%%Kiefer, J., K. Schenk-Meuser, and M. Kost. 1996. \textit{Radiation biology}[PDF], p. 300-367. In D. Moore, P. Bie, and H. Oser (ed.), Biological and medical research in space. Springer, Berlin, Germany. accessed 11/9/16
-% 
-%	
-%
-%\bibitem{SamURD}
-%	Alfonso Garcia Morelos, S. (2016, October 13).
-%	\textit{A Novel Microbe Trap.}
-%	Presentation at UH Undergraduate Research Day. \url{http://www.uh.edu/honors/undergraduate-research/}
-%	
-%	
-%%\bibitem{StevenURD}
-%
-%%\bibitem{FreEttaWomensConference}
-%
-%%\bibitem{StevenSchoolPres}
-%
-%%\bibitem{StevenURD}
-%%  Oliver, S. J. (2017, October 12). 
-%%  \textit{Stratospheric Organism and Radiation Analyzer}
-%%  Presentation at UH Undergraduate Research Day. Retrieved October 12, 2017, from \url{http://www.uh.edu/honors/undergraduate-research/events/urday2017/}
-%
-%%\bibitem{StevenSchoolPres}
-%%  Oliver, S. J. (2017, November 4). 
-%%  \textit{STEM Life at UH}
-%%  Presentation at UH Gathering of the Eagles STEM Symposium. \url{https://www.uh.edu/news-events/stories/2016/November/110416EaglesSTEM.php}
-%
-%%\bibitem{Fre}
-%%  Brooks, F. (2017, January 14).
-%%  \textit{Stratospheric Organism and Radiation Analyzer}
-%%  Presentation at Rice University, APS Conferences for Undergraduate Women in Physics (CUiP). \url{http://www.google.com/url?q=http%3A%2F%2Fwww.aps.org%2Fprograms%2Fwomen%2Fworkshops%2Fcuwip.cfm&sa=D&sntz=1&usg=AFQjCNE5pImV-SVrb87CvgAa9RSfeCrYXg}  
-%  
-%%\bibitem{SamAPS}
-%%	Alfonso Garcia Morelos, S. (2017, October 20).
-%%	\textit{Stratospheric Organism and Radiation Analyzer}
-%%	Retrieved October 20, 2017, from \textit{Bulletin of the American Physical Society}. \url{https://meetings.aps.org/Meeting/TSF17/Session/E5.3}
-%	
-%  
-%%  \bibitem{MIT}
-%%	MIT-Lemelson Award 2018.
-%%	\url{https://lemelson.mit.edu/}
+%---Bibliography
+\input{Bibliography}
 
-\end{thebibliography}
 
 
 \end{document}
@@ -420,6 +230,5 @@ Keywords: Radiation detection; Radiation exposure at aviation altitudes; Dose eq
 %%
 %% End of file `elsarticle-template-1-num.tex'.
               
-\grid
 \grid
 \grid
