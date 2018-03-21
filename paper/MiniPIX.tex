@@ -50,6 +50,7 @@
 
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{hyperref}
 
 %%   round  -  round parentheses are used (default)
 %%   square -  square brackets are used   [option]
@@ -188,6 +189,7 @@ During the HASP 2017\cite{hasp} flight the MiniPIX hybrid pixel detector\cite{mi
 
 \section{Background}
 \label{Background}
+TimePIX based hybrid pixel detectors have been employed on the International Space Station for the purpose of space radiation dosimetry.
 % I suggest we discuss briefly Timepix detectors use on the ISS and other places for space radiation dosimetry and particle identification. We can also talk a bit about our motivations of studying cosmic rays on commercial airline flights.
 
 \section{Experiment Design}
@@ -226,7 +228,8 @@ If it is a table, you need to include a title above the table.  You must also de
 \begin{figure}[h]
 \centering
 \caption{Cluster Type Counts vs. altitude.}
-\includegraphics[scale=.5]{ctva-cropped.pdf}
+\includegraphics[scale=.5
+]{ctva-cropped.pdf}
 \end{figure}
 
 \section{Discussion}
@@ -307,8 +310,8 @@ STEM Center (need official title and name)
 %\bibitem{valve}
 % Valve data sheet \url{http://www.generant.com/Literature/Series\%20VRV\%20Product\%20Literature.pdf}.
 %
-%\bibitem{advacam}
-%  ADVACAM at \url{advacam.com}.
+\bibitem{advacam}
+  ADVACAM at \url{http://www.advacam.com}
 %
 %\bibitem{medipix}
 %  Medipix collaboration at \url{https://medipix.web.cern.ch/}.
@@ -400,5 +403,6 @@ STEM Center (need official title and name)
 %%
 %% End of file `elsarticle-template-1-num.tex'.
               
+\grid
 \grid
 \grid
