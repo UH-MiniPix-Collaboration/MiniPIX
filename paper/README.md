@@ -17,3 +17,15 @@ Google is your friend. But we all get stuck so ask if something is not clear or 
 ##Links of the Day
 -https://xkcd.com/378/
 -http://vim-latex.sourceforge.net/
+
+## Sections 
+- Abstract
+- Introduction 
+- Background
+- Experiment Design
+- Data Analysis
+- Discussion 
+- Conclusion
+- Acknowledgements
+- Funding Sources
+- Bibliography

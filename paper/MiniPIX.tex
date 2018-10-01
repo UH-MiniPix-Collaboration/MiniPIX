@@ -17,8 +17,8 @@
 %%
 %% $Id: elsarticle-template-1-num.tex 149 2009-10-08 05:01:15Z rishi $
 %% $URL: http://lenova.river-valley.com/svn/elsbst/trunk/elsarticle-template-1-num.tex $
-%%
-\documentclass[preprint,12pt]{elsarticle}
+
+\documentclass[final,1p, times, twocolumn]{elsarticle}
 
 %% Use the option review to obtain double line spacing
 %% \documentclass[preprint,review,12pt]{elsarticle}
@@ -43,11 +43,15 @@
 %% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
 %% for the whole article with \linenumbers after \end{frontmatter}.
 \usepackage{lineno}
-
+\usepackage{siunitx}
 %% natbib.sty is loaded by default. However, natbib options can be
 %% provided with \biboptions{...} command. Following options are
 %% valid:
 
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{float}
 %%   round  -  round parentheses are used (default)
 %%   square -  square brackets are used   [option]
 %%   curly  -  curly braces are used      {option}
@@ -68,6 +72,8 @@
 %% \usepackage{authblk}
 %% authors package
 
+
+\graphicspath{{../figures/}}
 \journal{Nuclear Instruments and Methods in Physics Research}
 
 \begin{document}
@@ -76,7 +82,7 @@
 
 %% Title, authors and addresses
 
-\title{Dosimetry and radiation analysis in high altitude flights using MiniPIX detectors}
+\title{MiniPIX Cosmic Ray Tracking and Radiation Dosimetry During HASP Stratospheric Balloon Flight}
 %% title is a work in progress...
 
 %% use the tnoteref command within \title for footnotes;
@@ -90,15 +96,17 @@
 %%
 %% \title{Title\tnoteref{label1}}
 %% \tnotetext[label1]{}
-\author{S.~A.~Garcia~Morelos\corref{cor1}\fnref{label2}}
-\author{F.~Brooks\corref{cor2}\fnref{label3}}
-\author{S.~Oliver\corref{cor3}\fnref{label4}}
-\author{A.~Walker\corref{cor4}\fnref{label5}}
-\author{K.~D.~Portillo\corref{cor5}\fnref{label6}}
-\author{R.~B.~Masek\corref{cor6}\fnref{label7}}
-\author{S.~George\corref{cor7}\fnref{label8}}
-\author{D.~Pattison\corref{cor8}\fnref{label9}}
-\author{A.~L.~Renshaw\corref{cor9}\fnref{label10}}
+
+% To avoid any authorship arguments I would suggest we order authors in alphabetical order by last name. Just a thought.
+\author{A.~Walker\fnref{label2}}
+\author{K.~D.~Portillo\fnref{label3}}
+\author{R.~B.~Masek\fnref{label4}}
+\author{S.~Oliver\fnref{label5}}
+\author{S.~A.~Garcia~Morelos\fnref{label6}}
+\author{F.~Brooks\fnref{label7}}
+\author{S.~George\fnref{label8}}
+\author{D.~Pattison\fnref{label9}}
+\author{A.~L.~Renshaw\fnref{label10}}
 
 %% \ead{email address}
 %% \ead[url]{home page}
@@ -131,9 +139,6 @@
 \begin{abstract}
 
 The results from the radiation experiment in the SORA(SOURCE) (Stratospheric Organisms and Radiation Analyzer) high altitude balloon flight are presented.  The SORA payload included a semiconductor pixel detector, the MiniPIX(SOURCE), for cosmic ray studies and imaging in the stratosphere at an altitude of 30 kilometers.  The MiniPIX was interfaced with a low-powered  computer, a Raspberry Pi 3 (SOURCE).  The code and interface were based on S.George (SOURCE) work with the MiniPIX and TimePIX devices.  The MiniPIX was set to TOT (time over threshold mode) and monitored cosmic radiation for a total flight time of (HOURS).  Overall, the SORA payload was a test bed for this low cost setup for future satellite missions.
-WIP!!!
-%% Text of abstract
-%Suspendisse potenti. Suspendisse quis sem elit, et mattis nisl. Phasellus consequat erat eu velit rhoncus non pharetra neque auctor. Phasellus eu lacus quam. Ut ipsum dolor, euismod aliquam congue sed, lobortis et orci. Mauris eget velit id arcu ultricies auctor in eget dolor. Pellentesque suscipit adipiscing sem, imperdiet laoreet dolor elementum ut. Mauris condimentum est sed velit lacinia placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam diam metus, pharetra vitae euismod sed, placerat ultrices eros. Aliquam tincidunt dapibus venenatis. In interdum tellus nec justo accumsan aliquam. Nulla sit amet massa augue.
 
 \end{abstract}
 
@@ -143,7 +148,7 @@ WIP!!!
 %Highlights are a short collection of bullet points that convey the core findings of the article. Highlights are optional and should be submitted in a separate editable file in the online submission system. Please use 'Highlights' in the file name and include 3 to 5 bullet points (maximum 85 characters, including spaces, per bullet point). You can view example Highlights on our information site.
 
 \begin{keyword}
-MiniPIX \sep CERN \sep HASP \sep LSU \sep SORA \sep NASA \sep Radiation \sep Cosmic \sep Houston \sep UH
+MiniPIX \sep TimePIX \sep HASP \sep SORA \sep Cosmic Radiation \sep Stratospheric Balloon \sep Dosimetry
 %% keywords here, in the form: keyword \sep keyword
 
 %% MSC codes here, in the form: \MSC code \sep code
@@ -166,106 +171,13 @@ MiniPIX \sep CERN \sep HASP \sep LSU \sep SORA \sep NASA \sep Radiation \sep Cos
 %%km (kilometers)
 %%m (meters)
 
-%Acknowledgements
-%Collate acknowledgements in a separate section at the end of the article before the references and do not, therefore, include them on the title page, as a footnote to the title or otherwise. List here those individuals who provided help during the research (e.g., providing help during the assembly process, language help, writing assistance or proof reading the article, etc.).
-
 \end{frontmatter}
 
 %%
 %% Start line numbering here if you want
 %%
-\linenumbers
+%\linenumbers
 
-%% main text
-\section{Introduction}
-\label{Introduction}
-
-State the objectives of the work and provide an adequate background, avoiding a detailed literature survey or a summary of the results.
-
-%% Study the cosmic and terrestrial radiation in which extremophiles may reside.  Overall, study cosmic radiation at altitudes of 36 km to 40 km.
-
-Maecenas cite{Smith:2012qr} fermentum cite{Smith:2013jd} urna ac sapien tincidunt lobortis. Nunc feugiat faucibus varius. Ut sed purus nunc. Ut eget eros quis lectus mollis pharetra ut in tellus. Pellentesque ultricies velit sed orci pharetra et fermentum lacus imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse commodo ultrices mauris, condimentum hendrerit lorem condimentum et. Pellentesque urna augue, semper et rutrum ac, consequat id quam. Proin lacinia aliquet justo, ut suscipit massa commodo sit amet. Proin vehicula nibh nec mauris tempor interdum. Donec orci ante, tempor a viverra vel, volutpat sed orci.
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque quis interdum velit. Nulla tincidunt sem quis nisi molestie nec hendrerit nulla interdum. Nunc at lectus at neque dapibus dapibus sit amet in massa. Nam ut nisl in diam consectetur dignissim. Sed lacinia diam id nunc suscipit vitae semper lorem semper. In vehicula velit at tortor fringilla elementum aliquam erat blandit. Donec pretium libero et neque vehicula blandit. Curabitur consequat interdum sem at ultrices. Sed at tincidunt metus. Etiam vulputate, lacus eget fermentum posuere, ante mi dignissim augue, et ultrices felis tortor sed nisl.
-
-\begin{itemize}
-\item Bullet point one
-\item Bullet point two
-\end{itemize}
-
-\begin{enumerate}
-\item Numbered list item one
-\item Numbered list item two
-\end{enumerate}
-
-\subsection{Subsection One}
-
-Quisque elit ipsum, porttitor et imperdiet in, facilisis ac diam. Nunc facilisis interdum felis eget tincidunt. In condimentum fermentum leo, non consequat leo imperdiet pharetra. Fusce ac massa ipsum, vel convallis diam. Quisque eget turpis felis. Curabitur posuere, risus eu placerat porttitor, magna metus mollis ipsum, eu volutpat nisl erat ac justo. Nullam semper, mi at iaculis viverra, nunc velit iaculis nunc, eu tempor ligula eros in nulla. Aenean dapibus eleifend convallis. Cras ut libero tellus. Integer mollis eros eget risus malesuada fringilla mattis leo facilisis. Etiam interdum turpis eget odio ultricies sed convallis magna accumsan. Morbi in leo a mauris sollicitudin molestie at non nisl.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{l l l}
-\hline
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\hline
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\hline
-\end{tabular}
-\caption{Table caption}
-\end{table}
-
-\subsection{Subsection Two}
-
-Donec eget ligula venenatis est posuere eleifend in sit amet diam. Vestibulum sollicitudin mauris ac augue blandit ultricies. Nulla facilisi. Etiam ut turpis nunc. Praesent leo orci, tincidunt vitae feugiat eu, feugiat a massa. Duis mauris ipsum, tempor vel condimentum nec, suscipit non mi. Fusce quis urna dictum felis posuere sagittis ac sit amet erat. In in ultrices lectus. Nulla vitae ipsum lectus, a gravida erat. Etiam quam nisl, blandit ut porta in, accumsan a nibh. Phasellus sodales euismod dolor sit amet elementum. Phasellus varius placerat erat, nec gravida libero pellentesque id. Fusce nisi ante, euismod nec cursus at, suscipit a enim. Nulla facilisi.
-
-%\begin{figure}[h]
-%\centering\includegraphics[width=0.4\linewidth]{placeholder}
-%\caption{Figure caption}
-%\end{figure}
-
-Integer risus dui, condimentum et gravida vitae, adipiscing et enim. Aliquam erat volutpat. Pellentesque diam sapien, egestas eget gravida ut, tempor eu nulla. Vestibulum mollis pretium lacus eget venenatis. Fusce gravida nisl quis est molestie eu luctus ipsum pretium. Maecenas non eros lorem, vel adipiscing odio. Etiam dolor risus, mattis in pellentesque id, pellentesque eu nibh. Mauris nec ante at orci ultricies placerat ac non massa. Aenean imperdiet, ante eu sollicitudin vestibulum, dolor felis dapibus arcu, sit amet fermentum urna nibh sit amet mauris. Suspendisse adipiscing mollis dolor quis lobortis.
-
-\begin{equation}
-\label{eq:emc}
-e = mc^2
-\end{equation}
-
-\section{Methods}
-\label{Methods}
-
-Reference to Section ref{S:1}. Etiam congue sollicitudin diam non porttitor. Etiam turpis nulla, auctor a pretium non, luctus quis ipsum. Fusce pretium gravida libero non accumsan. Donec eget augue ut nulla placerat hendrerit ac ut mi. Phasellus euismod ornare mollis. Proin tempus fringilla ultricies. Donec pretium feugiat libero quis convallis. Nam interdum ante sed magna congue eu semper tellus sagittis. Curabitur eu augue elit.
-
-Aenean eleifend purus et massa consequat facilisis. Etiam volutpat placerat dignissim. Ut nec nibh nulla. Aliquam erat volutpat. Nam at massa velit, eu malesuada augue. Maecenas sit amet nunc mauris. Maecenas eu ligula quis turpis molestie elementum nec at est. Sed adipiscing neque ac sapien viverra sit amet vestibulum arcu rhoncus.
-
-Vivamus pharetra nibh in orci euismod congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque lacus diam, congue vel laoreet id, iaculis eu sapien. In id risus ac leo pellentesque pellentesque et in dui. Etiam tincidunt quam ut ante vestibulum ultricies. Nam at rutrum lectus. Aenean non justo tortor, nec mattis justo. Aliquam erat volutpat. Nullam ac viverra augue. In tempus venenatis nibh quis semper. Maecenas ac nisl eu ligula dictum lobortis. Sed lacus ante, tempor eu dictum eu, accumsan in velit. Integer accumsan convallis porttitor. Maecenas pretium tincidunt metus sit amet gravida. Maecenas pretium blandit felis, ac interdum ante semper sed.
-
-In auctor ultrices elit, vel feugiat ligula aliquam sed. Curabitur aliquam elit sed dui rhoncus consectetur. Cras elit ipsum, lobortis a tempor at, viverra vitae mi. Cras sed urna sed eros bibendum faucibus. Morbi vel leo orci, vel faucibus orci. Vivamus urna nisl, sodales vitae posuere in, tempus vel tellus. Donec magna est, luctus non commodo sit amet, placerat et enim.
-
-\section{Results}
-\label{Results}
-All of our data goes here, straight up with no analysis.  If it is a figure, you need a figure name underneath and you must describe it in the following paragraph.  
-
-If it is a table, you need to include a title above the table.  You must also describe the table before inserting it.  
-
-\section{Analysis}
-\label{Analysis}
-
-\section{Discussion}
-\label{Discussion}
-
-\section{Conclusion}
-\label{Conclusion}
-In auctor ultrices elit, vel feugiat ligula aliquam sed. Curabitur aliquam elit sed dui rhoncus consectetur. Cras elit ipsum, lobortis a tempor at, viverra vitae mi. Cras sed urna sed eros bibendum faucibus. Morbi vel leo orci, vel faucibus orci. Vivamus urna nisl, sodales vitae posuere in, tempus vel tellus. Donec magna est, luctus non commodo sit amet, placerat et enim.
-
-\section{Acknowledgements}
-\label{Acknowledgements}
-This will be a list populated by all the people that helped contribute to the project at one point or the other.  This includes those that helped us build briefly during the summer, and also those that helped review our paper.
-
-\section{Funding Sources}
-\label{funding}
-STEM Center (need official title and name)
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
@@ -282,137 +194,36 @@ STEM Center (need official title and name)
 %%   \cite[chap. 2]{key} ==>>  [#, chap. 2]
 %%   \citet{key}         ==>>  Author [#]
 
-%% References with bibTeX database:
-%%%%%%%%
-%%%%%%%%\bibliographystyle{model1-num-names}
-%%%%%%%%\bibliography{sample.bib}
+%---Introduction
+\input{Introduction}
 
-%% Authors are advised to submit their bibtex database files. They are
-%% requested to list a bibtex style file in the manuscript if they do
-%% not want to use model1-num-names.bst.
+%---Background
+\input{Background}
 
-%% References without bibTeX database:
+%---Experiment Design
+\input{Design}
 
-\begin{thebibliography}{00}
+%---Data Analysis
+\input{Analysis}
 
-%% \bibitem must have the following form:
-%%   \bibitem{key}...
-%%
+%---Discussion
+\input{Discussion}
 
-%\bibitem{SORA}S.A. Garcia Morelos, F.Brooks, S.Oliver, A.Walker, K.D. Portillo, R.B. Masek, D.Mroczek, D.Pena, J.Juarez, A.Cruz, D. Henandez, S.George, D. Pattison, A.L.Renshaw. \textit{Scientific Report for the UH Team.} SORA 2017 Mission Webpage. \textit{http://laspace.lsu.edu/hasp/groups/Payload.php?py=2017&pn=10}.
+%---Conclusion
+\input{Conclusion}
 
-\bibitem{silicon_sensor}MiniPIX - Miniaturized Portable USB Photon Counting Camera. (n.d.). Retrieved February 02, 2017, from \textit{http://advacam.com/camera/minipix}.
+%---Acknowledgements
+\input{Acknowledgements}
 
-%\bibitem{LSU}
-%  Christner, B., Alleman, M., Bryan, N., Burke, S., Guzik, T.G., Granger, D., King, G. (2013) \textit{LSU HASP2013 PDF. Baton Rouge: Louisiana Space Consortium}.
-%
-%%\bibitem{SolidWorks}
-%%  SolidWorks 3D CAD software \url{http://www.solidworks.com/}.
-%
-%\bibitem{Extremophiles}
-%  Extremophiles \href{http://www.nytimes.com/2013/02/07/science/living-bacteria-found-deep-under-antarctic-ice-scientists-say.html}{http://www.nytimes.com/2013/02/07/science/living-bacteria-found-deep-\\under-antarctic-ice-scientists-say.html}.
-%
-%\bibitem{canales}
-% Canales D. C. and Ehteshami A., \textit{An attempt to sample atmospheric bacteria}, Houston, TX, 2015, January 11.
-%
-%\bibitem{bexus}
-%Urbar, J., Scheirich, J., Jakubek, J., 2011. Medipix/Timepix cosmic ray tracking on BEXUS stratospheric balloonflights. Nucl. Instrum. Methods A 633, S206-209.
-%	
-%%\bibitem{uv_irradiance}
-%%  Calculating the UV Index. (2016, October 14). Retrieved June 03, 2017, from \url{https://www.epa.gov/sunsafety/calculating-uv-index-0}.
-%
-%%\bibitem{cleanbox}
-%% Clean box material \url{https://www.mcmaster.com/\#uhmw-polyethylene/=1aijn1p}.
-%
-%\bibitem{valve}
-% Valve data sheet \url{http://www.generant.com/Literature/Series\%20VRV\%20Product\%20Literature.pdf}.
-%
-%\bibitem{advacam}
-%  ADVACAM at \url{advacam.com}.
-%
-%\bibitem{medipix}
-%  Medipix collaboration at \url{https://medipix.web.cern.ch/}.
-%  
-%\bibitem{stuartthesis} 22
-%  George, S., \textit{Dosimetric Applications of Hybrid Pixel Detectors}, University of Wollongong, Australia, 2015.
-%
-%%\bibitem{mpdatasheet}
-%%  ADVACAM, \textit{MINIPIX Version 1.0 Datasheet}, Retrieved from \url{http://www.widepix.cz/files/datasheets/MiniPIX\%20v1.0\%20Datasheet.pdf}.
-%
-%%\bibitem{mpjakubek}
-%%  Jan Jakubek, \textit{Precise energy calibration of pixel detector working in time-over-threshold mode} Institute of Experimental and Applied Physics, Czech Technical University in Prague, Czech Republic, 2011.
-%  
-%
-%    
-%
-%
-%%\bibitem{magnetictool}
-%%  United States National Oceanic and Atmospheric Administration, \textit{Magnetic Field Calculators} [Data sets], Retrieved from \url{https://www.ngdc.noaa.gov/geomag-web/#igrfwmm}.
-%
-%%\bibitem{gorman}
-%%	Gorman, J. (2013, February 06). \textit{Scientists Find Life in the Cold and Dark Under Antarctic Ice.} Retrieved September 15, 2016, from Scientists Find Life in the Cold and Dark Under Antarctic Ice.
-%	
-% 
-% 
-%%\bibitem{pumpsource}
-%%  \url{http://www.knfusa.com/?type=5600&amp;file=2079}.
-%
-%
-%%\bibitem{Horneck}
-%%  Horneck, G. 1993. The Biostack concept and its application in space and at accelerators: studies in Bacillus subtilis spores, p. 99-115. In C. E. Swenberg, G. Horneck, and E. G. Stassinopoulos (ed.), \textit{Biological effects and physics of solar and galactic cosmic radiation}[PDF], part A. Plenum Press, New York, NY. accessed 10/24/16  
-%
-%%\bibitem{Horneck} 
-%%  Horneck, G. 2007. \textit{Space radiation biology}[PDF], p. 243-273. In E. Brinckmann (ed.), Biology in space and life on Earth. Wiley-VCH, Weinheim, Germany. Accessed 10/26/16
-%
-%%\bibitem{Horneck}
-%%  Horneck, G., C. Baumstark-Khan, and G. Reitz. 2002. \textit{ Space microbiology: effects of ionizing radiation on microorganisms in space}[PDF], p. 2988-2996. In G. Bitton (ed.), The encyclopedia of environmental microbiology. John Wiley \& Sons, New York, NY. Accessed 10/30/16
-%
-%%\bibitem{Horneck}
-%%  Horneck, G., C. Baumstark-Khan, and R. Facius. 2006. \textit{Radiation biology}[PDF], p. 292-335. In G. Cl?ment and K. Slenzka (ed.), Fundamentals of space biology. Kluwer Academic Publishers/Springer, Dordrecht, The Netherlands. accessed 11/4/16
-%
-%%\bibitem{Kiefer}
-%%Kiefer, J., K. Schenk-Meuser, and M. Kost. 1996. \textit{Radiation biology}[PDF], p. 300-367. In D. Moore, P. Bie, and H. Oser (ed.), Biological and medical research in space. Springer, Berlin, Germany. accessed 11/9/16
-% 
-%	
-%
-%\bibitem{SamURD}
-%	Alfonso Garcia Morelos, S. (2016, October 13).
-%	\textit{A Novel Microbe Trap.}
-%	Presentation at UH Undergraduate Research Day. \url{http://www.uh.edu/honors/undergraduate-research/}
-%	
-%	
-%%\bibitem{StevenURD}
-%
-%%\bibitem{FreEttaWomensConference}
-%
-%%\bibitem{StevenSchoolPres}
-%
-%%\bibitem{StevenURD}
-%%  Oliver, S. J. (2017, October 12). 
-%%  \textit{Stratospheric Organism and Radiation Analyzer}
-%%  Presentation at UH Undergraduate Research Day. Retrieved October 12, 2017, from \url{http://www.uh.edu/honors/undergraduate-research/events/urday2017/}
-%
-%%\bibitem{StevenSchoolPres}
-%%  Oliver, S. J. (2017, November 4). 
-%%  \textit{STEM Life at UH}
-%%  Presentation at UH Gathering of the Eagles STEM Symposium. \url{https://www.uh.edu/news-events/stories/2016/November/110416EaglesSTEM.php}
-%
-%%\bibitem{Fre}
-%%  Brooks, F. (2017, January 14).
-%%  \textit{Stratospheric Organism and Radiation Analyzer}
-%%  Presentation at Rice University, APS Conferences for Undergraduate Women in Physics (CUiP). \url{http://www.google.com/url?q=http%3A%2F%2Fwww.aps.org%2Fprograms%2Fwomen%2Fworkshops%2Fcuwip.cfm&sa=D&sntz=1&usg=AFQjCNE5pImV-SVrb87CvgAa9RSfeCrYXg}  
-%  
-%%\bibitem{SamAPS}
-%%	Alfonso Garcia Morelos, S. (2017, October 20).
-%%	\textit{Stratospheric Organism and Radiation Analyzer}
-%%	Retrieved October 20, 2017, from \textit{Bulletin of the American Physical Society}. \url{https://meetings.aps.org/Meeting/TSF17/Session/E5.3}
-%	
-%  
-%%  \bibitem{MIT}
-%%	MIT-Lemelson Award 2018.
-%%	\url{https://lemelson.mit.edu/}
+%---Funding Sources
+\input{Funding}
 
-\end{thebibliography}
+%---Appendix
+\input{Appendix}
+
+%---Bibliography
+\input{Bibliography}
+
 
 
 \end{document}
@@ -420,3 +231,5 @@ STEM Center (need official title and name)
 %%
 %% End of file `elsarticle-template-1-num.tex'.
               
+\grid
+\grid
