@@ -6,3 +6,5 @@
 - Andrew Walker
 - Kevin Portillo
 - Reed Masek
+- Jimish Patel
+- Andrew Renshaw
