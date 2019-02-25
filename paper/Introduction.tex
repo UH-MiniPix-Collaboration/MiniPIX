@@ -1,15 +1,15 @@
 \section{Introduction}
 \label{Introduction}
 
-During the HASP 2017\cite{hasp} and 2018 flight (CITE), the MiniPIX hybrid pixel detector\cite{minipix} was used to measure levels of cosmic radiation experienced by the SORA payloads\cite{sora} (cite second flight too). 
+During the HASP 2017 and 2018 flight \cite{hasp} , the MiniPIX hybrid pixel detector\cite{minipix} was used to track cosmic rays in the stratosphere. 
 %
-Presented in this paper are the methods used and measurements recorded during the aforementioned HASP stratospheric balloon flights.
+Presented in this paper is an overview of the design of the radiation instrumentation on the SORA payload and recorded data from both flights.
 %
-The MiniPIX utilizes a TimePIX\cite{timepix} silicon detector designed by CERN\cite{cern} and relays the recorded data through its USB 2.0 interface provided by ADVACAM\cite{advacam}. 
+The MiniPIX utilizes a TimePIX\cite{timepix} silicon detector designed by CERN\cite{cern} and a USB 2.0 readout interface provided by ADVACAM\cite{advacam}. 
 %
 The detector boarded a Raspberry PI 3 (RPI3) which ran the device in time over threshold (TOT) mode measuring deposited energy onto each pixel per frame throughout the flight. 
 %
-Frames were collected every \SI{4}{\second} with roughly a \SI{6}{\second} reset period. 
+Frames were collected every \SI{4}{\second} using a bias voltage of $\SI{4}{\kilo\electronvolt}$ . 
 %include settings for the second flight too.
 %
 Data acquisitions began at power up prior to launch and ended at power down prior to freefall. 
