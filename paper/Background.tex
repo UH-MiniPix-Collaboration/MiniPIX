@@ -1,13 +1,19 @@
 % I suggest we discuss briefly Timepix detectors use on the ISS and other places for space radiation dosimetry and particle identification. We can also talk a bit about our motivations of studying cosmic rays on commercial airline flights.
+%
+%Find model to fit our data
+%
+%Mention motivation for study, such as GCR's, seeing the Regener-Pfotzer Maximum, space flight and radiation importance, commercial air flights.  LOW COST RAPSBERRY PI SYSTEM.
 
 \section{Background}
 \label{Background}
-
-TimePIX detectors have many applications in the realm of Particle Physics. 
+%%%GCR's and Regener-Pfotzer Maxiumum, space flight ----- Work in Progress
+Space radiation and galactic cosmic rays (GCRs) are all real danger for the space flight and aviation.  Low Earth Orbit, the Earth space radiation environment and even within the atmosphere, exposure to radiation are all a constant risk. Exposure limitation is critical, so being able to measure real-time exposure could help save lives.  Studying the radiation environment in the edge of space and within the atmosphere helps in preparing for current and future space missions.  Furthermore, a TimePIX device could effectively be used as a low cost dosimeter to create a network of devices to better understand the Earth space radiation environment and observe space weather.
+%%%lets tie this together
+TimePIX detectors have many applications in the realm of particle physics. 
 %
 Numerous balloon flights have included the use of TimePIX devices for the purposes of particle imaging and radiation dosimetry in unusual and unfamiliar environments, such as the stratosphere \cite{bexus}. 
 %
-The International Space Station (ISS) uses TimePIX devices to evalute the astronauts' exposure to ionizing radiation fields \cite{timepixiss}.
+The International Space Station (ISS) uses TimePIX devices to evalute the astronauts' exposure to ionizing radiation fields \cite{timepix}.
 %below is an actual space
 
 The TimePIX device used in this flight was a MiniPIX, which is a silicon-based hybrid pixel detector built by ADVACAM \cite{advacam}. 
@@ -26,6 +32,8 @@ When a particle ionizes with the silicon chip, the deposited charge is depleted 
     \label{fig:minipix_silicon}
 \end{figure}
 %
-
 \textbf{<<Include silicon-chip figure?>>}
 %figure name: minipix_silicon.pdf
+%
+
+For the SORA flights, the MiniPIX was coupled with a low cost open ARM based computer.  Both flights utilized a Raspberry Pi 3 to communicate and handle all operations with the MiniPIX.  This system allowed for remote operation and on-board analyzation of all data.  The SORA flights tested the feasibility of these low-cost systems to fly further space missions.  
