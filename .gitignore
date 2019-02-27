@@ -6,3 +6,8 @@ paper/MiniPIX.out
 paper/MiniPIX.pdf
 paper/MiniPIX.spl
 .DS_Store
+*.gz
+layout.aux
+layout.log
+layout.pdf
+layout.synctex.gz
