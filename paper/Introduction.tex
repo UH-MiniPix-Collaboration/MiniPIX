@@ -1,24 +1,23 @@
 \section{Introduction}
 \label{Introduction}
 
-During the HASP 2017 and 2018 flights \cite{hasp} , the MiniPIX hybrid pixel detector\cite{minipix} was used to track cosmic rays in the stratosphere. 
+During the High Altitude Student Platform (HASP) 2017 and 2018 flights \cite{hasp}, the MiniPIX hybrid pixel detector\cite{minipix} was used to track cosmic rays in the stratosphere. 
+%We need to use the full phrase at least once before using the acronym. Same thing with SORA in our abstract- the acronym in () is placed after the payloads full name. 
 %
 This paper presents an overview of the design of the radiation measurement  instrumentation on the SORA payload in conjunction with the data acquired  from both flights.
 %
 The MiniPIX utilizes a TimePIX\cite{timepix} silicon detector designed by CERN\cite{cern} and a USB 2.0 readout interface provided by ADVACAM\cite{advacam}. 
 %
-The detector boarded a Raspberry PI 3 (RPI3) ;which ran the device in time over threshold (TOT) mode measuring deposited energy onto each pixel per frame throughout the flight. 
+A Raspberry PI 3 (RPI3) ran the device in time over threshold (TOT) mode and measured the deposited energy onto each pixel per frame throughout the flight. 
 %
-Frames were collected every \SI{4}{\second} using a bias voltage of $\SI{4}{\kilo\electronvolt}$ . 
+Data acquisition began at power up prior to launch and frames were collected every \SI{4}{\second}, using a bias voltage of $\SI{4}{\kilo\electronvolt}$, until the payload was powered down shortly before free-fall was initiated. 
 %include settings for the second flight too.
 %
-Data acquisition began at power up prior to launch and continued until the payload was powered down shortly before free-fall. 
-%
-The HASP frame test2017 flight launched from Fort Sumner, New Mexico on August 4th, 2017 at 14:04 UTC and ascended to a float altitude of about $\SI{31.5}{\kilo\meter}$ at 16:22 UTC which was maintained for about \SI{10.5}{\hour}.
-%As for the HASP 2018 flight, it launch from the same Fort sumner location.  It took off on September 4th, 2018 at 14:03 UTC.  It reached a stable float altitude of $\SI{37.2}{\kilo\meter}$ at 16:30 UTC.  Total float duration was about \SI{9.0}{\hour}.
+The HASP 2017 flight launched from Fort Sumner, New Mexico on August 4th, 2017 at 14:04 UTC and ascended to a float altitude of approximately $\SI{31.5}{\kilo\meter}$ at 16:22 UTC; which was maintained for approximately \SI{10.5}{\hour}. On September 4th, 2018 at 14:03 UTC the HASP 2018 mission also launched from Fort Sumner, Mew Mexico.  The 2018 payload reached a stable float altitude of $\SI{37.2}{\kilo\meter}$ at 16:30 UTC and the total float duration was approximately \SI{9.0}{\hour}.
 %
  The first payload drifted west for a total ground distance of \SI{580}{\kilo\meter} and was recovered just north of the Apache-Sitgreaves National Forest in Arizona. 
  %
- A year later, the second payload terminated its flight and then landed shortly about \SI{96.6}{\kilo\meter} southwest of Mt Graham, Arizona after traveling a total of \SI{550}{\kilo\meter}.
+ The 2018 payload terminated its flight and landed approximately \SI{96.6}{\kilo\meter} southwest of Mt Graham, Arizona after traveling a total distance of \SI{550}{\kilo\meter}.
  %
- HASP (High Altitude Student Platform) provided both opportunities for the SORA payloads to take flight onboard high altitude balloons. The HASP flight program is further supported by NASA BPO (Balloon Progam Office) and LaSPACE (Louisiana Space Consortium).
+ %HASP provided both opportunities for the SORA payloads to take flight onboard high altitude balloons. Do we need to say this? We refer to the HASP 2017 and 2018 flights- which implies HASP provided the opportunity for the SORA payload in both instances. 
+ The HASP flight program is supported by the NASA BPO (Balloon Progam Office) and LaSPACE (Louisiana Space Consortium).
