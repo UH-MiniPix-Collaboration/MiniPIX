@@ -105,6 +105,7 @@
 \author{F.~Brooks\fnref{label7}}
 \author{K.~D.~Portillo\fnref{label3}}
 \author{J.~Patel\fnref{label11}}
+\author{D.~Pattison\fnref{label17}}
 \author{A.~L.~Renshaw\fnref{label10}}
 %% \ead{email address}
 %% \ead[url]{home page}
@@ -120,6 +121,7 @@
 %% \address[label3]{<address>}
 
 \address[label2,label3,label4,label5,label6,label7,label8,label9,label10,label11]{Department of Physics, University of Houston, Houston, TX 77204, USA}
+\address[label17]{Department of Biology and Microbiology, University of Houston, Houston, TX 77204, USA}
 %\address[label3]{Department of Physics, University of Houston, Houston, TX 77204, USA}
 %\address[label4]{Department of Physics, University of Houston, Houston, TX 77204, USA}
 %\address[label5]{Department of Physics, University of Houston, Houston, TX 77204, USA}
@@ -135,10 +137,13 @@
 %% \address{California, United States}
 %% \newcommand{\Houston}{Department of Physics, University of Houston, Houston, TX 77204, USA}
 %--- Add other authors in the order they should appear
+%Abstract
+%A concise and factual abstract is required. The abstract should state briefly the purpose of the research, the principal results and major conclusions. An abstract is often presented separately from the article, so it must be able to stand alone. For this reason, References should be avoided, but if essential, then cite the author(s) and year(s). Also, non-standard or uncommon abbreviations should be avoided, but if essential they must be defined at their first mention in the abstract itself.
 
 \begin{abstract}
 
-The latest results from the two radiation experiments onboard the Stratospheric Organisms and Radiation Analyzer (SORA), high altitude balloon flights are presented. \cite{SORA}  The SORA payload included a semiconductor pixel detector, the MiniPIX(SOURCE), for cosmic ray studies and imaging in the stratosphere at altitudes of 30 to 40 kilometers.  The MiniPIX was interfaced with a low-powered  computer, a Raspberry Pi 3 (SOURCE). The MiniPIX was set to TOT (time over threshold mode) and monitored cosmic radiation for a total flight time of (HOURS) on two separate flights.  The results from the SORA flights were evaluated for providing a basis for future low cost cosmic ray tracking platforms on high altitude balloons and satelites.
+The latest results from the two radiation experiments onboard of SORA (Stratospheric Organisms and Radiation Analyzer) high altitude balloon flights are presented.  The SORA payload included a semiconductor pixel detector, the MiniPIX, for cosmic ray studies and imaging in the stratosphere at altitudes of 30 to 40 kilometers.  The MiniPIX was interfaced with a low-powered  computer, a Raspberry Pi 3. The MiniPIX was set to TOT (time over threshold mode) and monitored cosmic radiation for a total flight time of 19.5 hours on two separate flights.  The results from the SORA flights were evaluated for providing a basis for future low cost cosmic ray tracking platforms on high altitude balloons and satellites.
+%may require more citations for SORA, MiniPIX and Raspberry Pi
 
 \end{abstract}
 
@@ -146,6 +151,10 @@ The latest results from the two radiation experiments onboard the Stratospheric 
 
 %optional: Highlights
 %Highlights are a short collection of bullet points that convey the core findings of the article. Highlights are optional and should be submitted in a separate editable file in the online submission system. Please use 'Highlights' in the file name and include 3 to 5 bullet points (maximum 85 characters, including spaces, per bullet point). You can view example Highlights on our information site.
+%
+%Keywords
+%
+%Immediately after the abstract, provide a maximum of 6 keywords, using American spelling and avoiding general and plural terms and multiple concepts (avoid, for example, 'and', 'of'). Be sparing with abbreviations: only abbreviations firmly established in the field may be eligible. These keywords will be used for indexing purposes.
 
 \begin{keyword}
 MiniPIX \sep TimePIX \sep HASP \sep SORA \sep Cosmic Radiation \sep Stratospheric Balloon \sep Dosimetry
@@ -200,11 +209,11 @@ MiniPIX \sep TimePIX \sep HASP \sep SORA \sep Cosmic Radiation \sep Stratospheri
 %---Background -----merged with introduction above
 %\input{Background}
 
-%---Experiment Design ----- now called Methods
-\input{Design}
+%---Experiment Design ----- now called Methods ----- 05/05/2019 FIXED
+\input{Methods}
 
-%---Data Analysis ----- now called Results
-\input{Analysis}
+%---Data Analysis ----- now called Results ---- 05/05/2019 FIXED
+\input{Results}
 
 %---Discussion
 \input{Discussion}
