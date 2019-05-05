@@ -1,9 +1,8 @@
 \section{Methods}
 \label{Methods}
 % This should be fairly brief, the system is not particularly complex.
-For the SORA flights, a MiniPIX with a USB interface was coupled with a low cost open ARM based computer called Raspberry Pi 3.  Both flights utilized a Raspberry Pi 3 to communicate and handle all operations with the MiniPIX.  This system allowed for remote operation and on-board analyzation of all data.  The SORA flights tested the feasibility of these low-cost systems to fly further upper atmospheric and near-space missions.  
+For the SORA flights, the MiniPIX was interfaced via USB with a Raspberry PI single board computer (RPI). Data was collected on the MiniPIX and frame data was sent over serial to the RPI for analysis. During the 2017 flight, only the raw data was stored for post-flight analysis. For the 2018 flight, a custom piece of software was written to concurrently handle analyzing frame data, calculating absorbed dose and handling command and configuration requests from the HASP telemetry interface in addition to storing the raw data. The improvements in the 2018 flight allowed for a near real-time analysis of the radiation environment and the ability to configure the MiniPIX shutter rate and detector parameters via the HASP uplink interface.
 
-The PyPixet library, developed by Daniel Turcek (CITE ME), controlled the MiniPIX device used in both SORA flights.  The 2017 flight was the first testbed for MiniPIX setup, testing the limits of the hardware and software setup.  The 2018 flight was more robust and applied many improvements based on challenges faced during the initial flight.  Important changes included support for an arbitrary number of MiniPIX detectors to record data simultaneously.  Furthermore, the 2018 flight software allowed for direct serial uplink and downlink. This supported observation of real-time data, adjusting the MiniPIX's shutter rate, and controlling the acquisition settings.
 
 \subsection{Configuration and Calibration}
 % Device parameters, threshold, bias voltage, shutter time etc.
