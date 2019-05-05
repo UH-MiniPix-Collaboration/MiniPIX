@@ -7,6 +7,19 @@ The PyPixet library, developed by Daniel Turcek (CITE ME), controlled the MiniPI
 
 \subsection{Configuration and Calibration}
 % Device parameters, threshold, bias voltage, shutter time etc.
+The appropriate calibration of the MiniPIX detector was applied at The University of Houston by Dr. Stu-
+art P. George, a collaborator within the Medipix Collaboration. The source calibration was applied using
+
+the \SI{60} {\kilo}eV \SI{^241}Am decay line, Sn Fluorescence and \SI{^55}Fe gamma rays. The Timepix hybrid pixel detector
+consists of 65 536 silicon p-n diodes, with each containing its own individual processing circuit. The response
+of each pixel can never be identical, thus a calibration must be performed for each individual pixel. 
+
+The data was recorded using the Pixet Pro software provided by ADVACAM ~\ref{}. Dr. George calibrated
+the pixel energy threshold from DAC counts to energy ~\ref{}. The threshold was set at 4 keV, just above
+the noise level of the detector. The set threshold energy of the Timepix chip determines what energies of
+particles are allowed to be measured by the detector. Energy measurements in the detector are accounted
+by measuring the charge collected in each individual pixel.
+
 \subsection{System Design}
 % RPI interface to MiniPIX, heatsink design etc.
 Additive manufacturing was utilized to create a custom made case for the MiniPIX device.  As seen in Figure ~\ref{fig:minipix_case}, the MiniPIX case is in white, while the heat sink setup is in blue-gray color.  In the early vacuum tests, it was found that the MiniPIX would require a passive cooling method to keep the device at operational levels.  At the same time, the ABS plastic enclosure acted as insulation, maintaining the MiniPIX temperatures in operational ranges.  The MiniPIX device was mated to the heatsink via a bracket (not shown in the figure ~\ref{fig:minipix_case}) and with thermal adhesive.
