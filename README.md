@@ -31,6 +31,7 @@ Left to do:
 - line 106 need help with image formatting
 - line 111 add more information as comment says; need help
 - line 114 image help; see comment
+- line 118 see comments, need citation for new Stuart Figure
 
 *Discussion.tex
 *Conclusion.tex

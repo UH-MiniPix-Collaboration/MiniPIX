@@ -17,3 +17,11 @@ paper/Abstract.log
 paper/Abstract.aux
 paper/Abstract.pdf
 paper/Abstract.log
+MiniPIX/
+*.pdf
+*.log
+*.aux
+paper/Abstract.pdf
+paper/Abstract.log
+paper/Abstract.aux
+.DS_Store
