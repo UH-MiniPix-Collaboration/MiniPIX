@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 JUL 2019 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  26 JUL 2019 00:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -767,44 +767,56 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 79.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(./Introduction.tex
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 4.
+(./Introduction.tex [1
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
+
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 6.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [1
+)
+[2]
+Overfull \hbox (36.1207pt too wide) in paragraph at lines 13--16
+[]\OT1/cmr/m/n/12 The MiniPIX is a portable ra-di-a-tion cam-era de-vel-oped by
+ the TimePIX/MiniPIX
+ []
 
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<../figures/minipix_silicon.pdf, id=89, 287.0725pt x 203.76125pt>
+Overfull \hbox (1.20993pt too wide) in paragraph at lines 13--16
+\OT1/cmr/m/n/12 256x256 pixel sil-i-con TimePIX Ap-pli-ca-tion Spe-cific In-te-
+grated Cir-cuit (ASIC)
+ []
+
+<../figures/minipix_silicon.pdf, id=90, 287.0725pt x 203.76125pt>
 File: ../figures/minipix_silicon.pdf Graphic file (type pdf)
 <use ../figures/minipix_silicon.pdf>
-Package pdftex.def Info: ../figures/minipix_silicon.pdf  used on input line 31.
+Package pdftex.def Info: ../figures/minipix_silicon.pdf  used on input line 35.
 
 (pdftex.def)             Requested size: 390.0pt x 276.82558pt.
- [3] [4 <../figures/minipix_silicon.pdf>]) (./Methods.tex [5]
-<../figures/Minipix_case_assembly.pdf, id=121, 270.2898pt x 446.17693pt>
+[3] [4 <../figures/minipix_silicon.pdf>]) (./Methods.tex [5]
+<../figures/Minipix_case_assembly.pdf, id=123, 270.2898pt x 446.17693pt>
 File: ../figures/Minipix_case_assembly.pdf Graphic file (type pdf)
 <use ../figures/Minipix_case_assembly.pdf>
 Package pdftex.def Info: ../figures/Minipix_case_assembly.pdf  used on input li
 ne 16.
 (pdftex.def)             Requested size: 195.0pt x 321.90071pt.
- [6]) (./Results.tex
-<../figures/count_rate_altitude_2017.pdf, id=128, 553.58823pt x 345.4506pt>
+ [6])
+(./Results.tex
+<../figures/count_rate_altitude_2017.pdf, id=130, 553.58823pt x 345.4506pt>
 File: ../figures/count_rate_altitude_2017.pdf Graphic file (type pdf)
 <use ../figures/count_rate_altitude_2017.pdf>
 Package pdftex.def Info: ../figures/count_rate_altitude_2017.pdf  used on input
  line 12.
 (pdftex.def)             Requested size: 249.1124pt x 155.45132pt.
  [7 <../figures/Minipix_case_assembly.pdf>]
-<../figures/count_rate_altitude_2018.pdf, id=148, 462.52798pt x 346.89601pt>
+<../figures/count_rate_altitude_2018.pdf, id=150, 462.52798pt x 346.89601pt>
 File: ../figures/count_rate_altitude_2018.pdf Graphic file (type pdf)
 <use ../figures/count_rate_altitude_2018.pdf>
 Package pdftex.def Info: ../figures/count_rate_altitude_2018.pdf  used on input
  line 24.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
  [8 <../figures/count_rate_altitude_2017.pdf>]
-<../figures/dva_stderr.pdf, id=204, 462.52798pt x 346.89601pt>
+<../figures/dva_stderr.pdf, id=206, 462.52798pt x 346.89601pt>
 File: ../figures/dva_stderr.pdf Graphic file (type pdf)
 <use ../figures/dva_stderr.pdf>
 Package pdftex.def Info: ../figures/dva_stderr.pdf  used on input line 36.
@@ -814,7 +826,7 @@ Overfull \hbox (13.13567pt too wide) in paragraph at lines 36--37
  [][] 
  []
 
-<../figures/cva_stderr.pdf, id=205, 462.52798pt x 346.89601pt>
+<../figures/cva_stderr.pdf, id=207, 462.52798pt x 346.89601pt>
 File: ../figures/cva_stderr.pdf Graphic file (type pdf)
 <use ../figures/cva_stderr.pdf>
 Package pdftex.def Info: ../figures/cva_stderr.pdf  used on input line 42.
@@ -830,19 +842,19 @@ Overfull \hbox (13.13567pt too wide) in paragraph at lines 42--43
 pdfTeX warning: pdflatex (file ../figures/cva_stderr.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
 >]
-<../figures/temps_flight_2018.pdf, id=376, 462.52798pt x 346.89601pt>
+<../figures/temps_flight_2018.pdf, id=378, 462.52798pt x 346.89601pt>
 File: ../figures/temps_flight_2018.pdf Graphic file (type pdf)
 <use ../figures/temps_flight_2018.pdf>
 Package pdftex.def Info: ../figures/temps_flight_2018.pdf  used on input line 6
 4.
 (pdftex.def)             Requested size: 390.0pt x 292.51282pt.
-<../figures/ctva-cropped.pdf, id=378, 357.335pt x 304.13625pt>
+<../figures/ctva-cropped.pdf, id=380, 357.335pt x 304.13625pt>
 File: ../figures/ctva-cropped.pdf Graphic file (type pdf)
 <use ../figures/ctva-cropped.pdf>
 Package pdftex.def Info: ../figures/ctva-cropped.pdf  used on input line 76.
 (pdftex.def)             Requested size: 390.0pt x 331.95673pt.
  [11 <../figures/temps_flight_2018.pdf>]
-<../figures/tracks.png, id=426, 752.8125pt x 752.8125pt>
+<../figures/tracks.png, id=428, 752.8125pt x 752.8125pt>
 File: ../figures/tracks.png Graphic file (type png)
 <use ../figures/tracks.png>
 Package pdftex.def Info: ../figures/tracks.png  used on input line 84.
@@ -851,70 +863,70 @@ Package pdftex.def Info: ../figures/tracks.png  used on input line 84.
 (./Discussion.tex [13 <../figures/tracks.png>] [14] [15] [16])
 (./Conclusion.tex) [17] (./Acknowledgements.tex) (./Funding.tex)
 (./Appendix.tex) (./Bibliography.tex
-Underfull \hbox (badness 6477) in paragraph at lines 25--26
+Underfull \hbox (badness 6477) in paragraph at lines 28--29
 \OT1/cmr/m/n/12 Their Oc-cu-pa-tional Ex-po-sure to Ion-iz-ing Ra-di-a-tion, av
 ail-able
  []
 
 [18]
-Underfull \hbox (badness 3302) in paragraph at lines 38--40
+Underfull \hbox (badness 3302) in paragraph at lines 41--43
 []\OT1/cmr/m/n/12 source for im-age: Mea-sure-ment of the en-ergy res-o-lu-tion
  and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
 \OT1/cmr/m/n/12 cal-i-bra-tion of hy-brid pixel de-tec-tors with GaAs:Cr sen-so
 r
  []
 
 
-Underfull \hbox (badness 7981) in paragraph at lines 38--40
+Underfull \hbox (badness 7981) in paragraph at lines 41--43
 \OT1/cmr/m/n/12 and Timepix read-out chip - Sci-en-tific Fig-ure on Re-search-
  []
 
 
-Underfull \hbox (badness 4366) in paragraph at lines 38--40
+Underfull \hbox (badness 4366) in paragraph at lines 41--43
 \OT1/cmr/m/n/12 Gate. Avail-able from: []$\OT1/cmtt/m/n/12 https : / / www . re
 searchgate . net / figure /
  []
 
 
-Overfull \hbox (165.52779pt too wide) in paragraph at lines 38--40
+Overfull \hbox (165.52779pt too wide) in paragraph at lines 41--43
 \OT1/cmtt/m/n/12 a-[]Structure-[]of-[]a-[]Timepix-[]detector-[]b-[]Timepix-[]pi
 xel-[]detector-[]with-[]USB-[]interface-[]FITPix _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 []\OT1/cmr/m/n/12 The Wors-en-ing Cos-mic Ray Sit-u-a-tion, avail-able
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 \OT1/cmr/m/n/12 at []$\OT1/cmtt/m/n/12 https : / / spaceweatherarchive . com / 
 2018 / 03 / 05 /
  []
 
 
-Underfull \hbox (badness 1577) in paragraph at lines 50--51
+Underfull \hbox (badness 1577) in paragraph at lines 53--54
 \OT1/cmtt/m/n/12 the-[]worsening-[]cosmic-[]ray-[]situation/$[] \OT1/cmr/m/n/12
  (ac-cessed on March 6th,
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 \OT1/cmr/m/n/12 at []$\OT1/cmtt/m/n/12 https : / / ro . uow . edu . au / cgi / 
 viewcontent . cgi ? article = 5605 &
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 []\OT1/cmr/m/n/12 ADVACAM, MINIPIX Ver-sion 1.0 Datasheet, avail-able at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 []$\OT1/cmtt/m/n/12 http : / / advacam . com / system / wp-[]content / uploads 
 / 2017 / 05 /
  []
@@ -931,10 +943,10 @@ Package rerunfilecheck Info: File `Abstract.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 243.
  ) 
 Here is how much of TeX's memory you used:
- 18190 strings out of 492649
- 353157 string characters out of 6129622
- 401057 words of memory out of 5000000
- 21837 multiletter control sequences out of 15000+600000
+ 18194 strings out of 492649
+ 353214 string characters out of 6129622
+ 399074 words of memory out of 5000000
+ 21840 multiletter control sequences out of 15000+600000
  543089 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,9n,50p,10359b,1091s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -954,10 +966,10 @@ ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
 2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2
 018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Abstract.pdf (21 pages, 829474 bytes).
+Output written on Abstract.pdf (21 pages, 830734 bytes).
 PDF statistics:
- 589 PDF objects out of 1000 (max. 8388607)
- 330 compressed objects within 4 object streams
- 67 named destinations out of 1000 (max. 500000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
+ 68 named destinations out of 1000 (max. 500000)
  150 words of extra memory for PDF output out of 10000 (max. 10000000)
 
