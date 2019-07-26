@@ -12,3 +12,6 @@ layout.log
 layout.pdf
 layout.synctex.gz
 .DS_Store
+paper/Abstract.pdf
+paper/Abstract.log
+paper/Abstract.aux
