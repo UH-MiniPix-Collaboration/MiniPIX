@@ -1,7 +1,7 @@
 \section{Methods}
 \label{Methods}
 % This should be fairly brief, the system is not particularly complex.
-For the SORA flights, the MiniPIX was interfaced via USB with a RPI. Data was collected on the MiniPIX and frame data was sent over serial to the RPI for analysis. During the 2017 flight, only the raw data was stored for post-flight analysis. For the 2018 flight, a custom piece of software was written to concurrently handle analyzing frame data, calculating absorbed dose and handling command and configuration requests from the HASP telemetry interface in addition to storing the raw data. The improvements in the 2018 flight allowed for a near real-time analysis of the radiation environment and the ability to configure the MiniPIX shutter rate and detector parameters via the HASP uplink interface. While being relatively cheap at a price point of 35\$ USD and consuming only \SI{1.2}{\watt} of electrical power, the RPI proved to be robust and operated without glitch for the duration of both flights.
+For the SORA flights, the MiniPIX was interfaced via USB with Raspberry Pi (RPI) single board computer. Data was collected on the MiniPIX and frame data was sent over serial to the RPI for analysis. During the 2017 flight, only the raw data was stored for post-flight analysis. For the 2018 flight, a custom piece of software was written to concurrently handle analyzing frame data, calculating absorbed dose and handling command and configuration requests from the HASP telemetry interface in addition to storing the raw data. The improvements in the 2018 flight allowed for a near real-time analysis of the radiation environment and the ability to configure the MiniPIX shutter rate and detector parameters via the HASP uplink interface. While being relatively cheap at a price point of 35\$ USD and consuming only \SI{1.2}{\watt} of electrical power, the RPI proved to be robust and operated without glitch for the duration of both flights.
 
 
 \subsection{Configuration and Calibration}
@@ -11,14 +11,15 @@ The Timepix ASIC consists of 65,536 silicon p-n diodes, each containing its own 
 
 \subsection{System Design}
 % RPI interface to MiniPIX, heatsink design etc.
-Additive manufacturing was utilized to create a custom made case for the MiniPIX device.  As seen in Figure ~\ref{fig:minipix_case}, the MiniPIX case is in white, while the heat sink setup is in blue-gray color.  In the early vacuum tests, it was found that the MiniPIX would require a passive cooling method to keep its temperature within operating limits.  At the same time, the ABS plastic enclosure acted as insulation, maintaining the MiniPIX temperature within the operating range.  The MiniPIX was mated to the heatsink via a bracket (not shown in the figure ~\ref{fig:minipix_case}) and with thermal adhesive.
+Additive manufacturing was used to create a custom made case for the MiniPIX device.  The flight assembly is shown in Figure ~\ref{fig:minipix_case} with individual components as labeled.  In the early vacuum tests, it was found that the MiniPIX would require a passive cooling method to keep its temperature within operating limits.  At the same time, the ABS plastic enclosure acted as insulation, maintaining the MiniPIX temperature within the operating range.  The MiniPIX was mated to the heatsink via a bracket (not shown in the figure ~\ref{fig:minipix_case}) and with thermal adhesive.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.50\textwidth]{Minipix_case_assembly.pdf} %REVIEW 1 from Renshaw: It might be useful to make this a side-by-side figure, with the second figure being a CAD drawing or picture of the payload showing the placement of the RPI and the MiniPIX, along with the other components. 
+    %%%Sam: upload new assembly picture
     \caption{MiniPIX Case Assembly}
     \label{fig:minipix_case}
 \end{figure}
-The MiniPIX case allowed for a USB cable to be routed through the enclosure to interface directly to the Raspberry Pi.  This allowed the MiniPIX device to be modular and placed in different configurations for both flights.  The Raspberry Pi was placed in a separate location within each payload near the power supply.  Overall, each payload was modular and accessible.
+The MiniPIX case allowed for a USB cable to be routed through the enclosure to interface directly to the Raspberry Pi.  This allowed the MiniPIX device to be modular and placed in different configurations for the two flights.  The Raspberry Pi was placed in a separate location within each payload near the power supply.  Overall, each payload was modular and accessible.
 
 
 

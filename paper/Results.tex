@@ -10,23 +10,23 @@
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.75]{count_rate_altitude_2017_f.pdf} %REVIEW 1 from Renshaw: Enlarge this figure and remove the title from the top, titles are not shown in papers since the text and caption should tell you what they are.  Titles are only used in presentations and when sharing the figures around to other people without text or caption. Change the y-axis title to "Counts per Minute"
-\caption{Count Rate and Altitude vs Time for 2017 flight.}
+\caption{Count Rate and Altitude vs Time for 2017 flight. The red line represents the GPS altitude over time in \SI{}{\km}.  The black lines represent the counts per minute over time}
 \label{fig:ratealttime_2017}
 \end{figure}
 %
 %First:
 %Present and characterize the first two plots - the data of the flight with counts vs altitude vs time.  Here we can talk about each flight and data shown.  Make sure to mention how the count rate changed as time and altitude changed.  We can talk about the flight time, the flight altitude variance, the coasting altitude, and how it all compares to the count rate.  We can be as descriptive as we can.
 %mention the position of the pfotzer-regener maximum for both years.  Talk about discrepancies as the data shows.  Speculate in discussion later.
-Both HASP balloons containing the SORA payloads were launched separately on September 4th on 2017 and 2018 respectively.  The MiniPIX was set to operate in Time over Threshold mode with a bias voltage of \SI{4}{\kilo\eV}.  Frames were collected at static 4 second intervals during the 2017 flight and between 1 and 4 second intervals for the 2018 flight.  The complete flight altitude profiles and count rates for the SORA  2017 and 2018 flights are shown in Figure~\ref{fig:ratealttime_2017} and Figure~\ref{fig:ratealttime_2018}, respectively.
+The MiniPIX was set to operate in Time over Threshold mode with a bias voltage of \SI{4}{\kilo\eV}.  Frames were collected at static 4 second intervals during the 2017 flight and between 1 and 4 second intervals for the 2018 flight.  The complete flight altitude profiles and count rates for the SORA  2017 and 2018 flights are shown in Figure~\ref{fig:ratealttime_2017} and Figure~\ref{fig:ratealttime_2018}, respectively.
 %
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.80]{count_rate_altitude_2018_f.pdf}%REVIEW 1 from Renshaw: Enlarge this figure and remove the title from the top, titles are not shown in papers since the text and caption should tell you what they are.  Titles are only used in presentations and when sharing the figures around to other people without text or caption. Change the y-axis title to "Counts per Minute"
-\caption{Count Rate and Altitude vs Time for 2018 flight}
+\caption{Count Rate and Altitude vs Time for 2018 flight. The red line represents the GPS altitude over time in \SI{}{\km}.  The black lines represent the counts per minute over time}
 \label{fig:ratealttime_2018}
 \end{figure}
 %
-As shown in Figure~\ref{fig:ratealttime_2017} and Figure~\ref{fig:ratealttime_2018}, both flights have very similar flight altitude profiles.  Both flights reached a float altitude after approximately \SI{2.5}{\hour}.  It is important to mention that the 2017 flight reach and maintained a float altitude of approximately $\SI{31.5}{\kilo\meter}$.  In contrast, the 2018 flight kept a float altitude of $\SI{37.2}{\kilo\meter}$.  The rate of decent was slow and steady for both flights.  
+As shown in Figure~\ref{fig:ratealttime_2017} and Figure~\ref{fig:ratealttime_2018}, both flights have very similar flight altitude profiles.  Both flights reached a float altitude after approximately \SI{2.5}{\hour}.  It is important to mention that the 2017 float altitude was approximately $\SI{31.5}{\kilo\meter}$.  While that for the 2018 flight was about $\SI{37.2}{\kilo\meter}$.  The rate of decent was slow and steady for both flights.  
 %
 As such, data was collected continuously throughout the whole flights. %%REVIEW 1 from Renshaw: Be careful about making this comment, based on the two figures, we see the altitude go almost to 0 for 2017, but the data stops before this, while for 2018 the plot cuts off the decent and so it is not clear where the data taking stopped.  I think you should rephrase this to say that data was taken during the entire ascent and float periods of both flights and don't mention anything about the decent since it happened much quicker than the ascent and also in a much less controlled manner since the payload was spinning out of control at that point.
 %
@@ -45,7 +45,7 @@ As such, data was collected continuously throughout the whole flights. %%REVIEW 
   \caption{}
   \label{fig:sub1}
 \end{subfigure}%
-\caption{Figure ~\ref{fig:sub2} shows the detector counts per minute as a function of barometric altitude. Figure ~\ref{fig:sub1} shows the absorbed dose rate in silicon as a function of barometric altitude.  Samples were averaged over \SI{2.5}{\kilo\meter} bins and error bars for both plots represent the standard error of the mean plotted at the $1\sigma$ level.}
+\caption{Figure ~\ref{fig:sub2} shows the detector counts per minute as a function of GPS altitude. Figure ~\ref{fig:sub1} shows the absorbed dose rate in silicon as a function of GPS altitude.  Samples were averaged over \SI{2.5}{\kilo\meter} bins and error bars for both plots represent the standard error of the mean plotted at the $1\sigma$ level.}
 \label{fig:dose-count-subplots}
 \end{figure}
 
@@ -67,7 +67,7 @@ As such, data was collected continuously throughout the whole flights. %%REVIEW 
 %\label{fig:dose-count-subplots}
 %\end{figure}
 %Next, go into the absorbed rate vs altitude plot.  Mention how the LET varies for materials such as silicon and muscle.  Go into the pfotzer-regener maximum again, compare.  Compare this to the accompanying figure, Detector Hits vs Altitude.  There is a slight discrepancy in the flights, this may be useful to mention.  All error bars are 1 sigma standard deviation.
-Shown in Figure~\ref{fig:sub1} and Figure~\ref{fig:sub2} are the dose rate in silicon and the detector count rate plotted as a function of barometric altitude. For the sake of clarity samples were averaged over \SI{2.5}{\kilo\meter} bins and plotted with error bars representing the standard error of the mean at the $1\sigma$ level. Dose rates for both flights appear to be in relatively good agreement up until approximately \SI{16}{\kilo\meter}. After which, the 2017 flight appears to reach a peak dose rate of \SI{4.8}{\micro\gray\per\hour} at approximately \SI{18}{\kilo\meter} while the 2017 flight reaches a peak of \SI{4.8}{\micro\gray\per\hour} at a higher altitude of \SI{24}{\kilo\meter}. 
+Shown in Figure~\ref{fig:sub1} and Figure~\ref{fig:sub2} are the dose rate in silicon and the detector count rate plotted as a function of GPS altitude. For the sake of clarity samples were averaged over \SI{2.5}{\kilo\meter} bins and plotted with error bars representing the standard error of the mean at the $1\sigma$ level. Dose rates for both flights appear to be in relatively good agreement up until approximately \SI{16}{\kilo\meter}. After which, the 2017 flight appears to reach a peak dose rate of \SI{4.8}{\micro\gray\per\hour} at approximately \SI{18}{\kilo\meter} while the 2017 flight reaches a peak of \SI{4.8}{\micro\gray\per\hour} at a higher altitude of \SI{24}{\kilo\meter}. 
 %
 However, the large error bars indicate that it is somewhat unclear as to where the peak dose rate occurs for both flights. %%REVIEW 1 from Renshaw: I would suggest to try and make a fit to the two data series with some function that is taken from a reference which provides the expected rate, this would be a good way to then state what the maximum is and where it is located, with the fit also producing the uncertainty of the location of the max.
 %
