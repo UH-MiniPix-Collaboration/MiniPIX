@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  26 JUL 2019 02:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  16 AUG 2019 01:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -767,30 +767,36 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 79.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(./Introduction.tex [1
+(./Introduction.tex
+Overfull \hbox (4.64626pt too wide) has occurred while \output is active
+\OT1/cmr/m/it/10 Preprint submitted to Nuclear Instruments and Methods in Physi
+cs Research August 16, 2019
+ []
+
+[1
 
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 6.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-[2]
-Overfull \hbox (36.1207pt too wide) in paragraph at lines 13--16
+) [2]
+Overfull \hbox (36.1207pt too wide) in paragraph at lines 17--28
 []\OT1/cmr/m/n/12 The MiniPIX is a portable ra-di-a-tion cam-era de-vel-oped by
  the TimePIX/MiniPIX
  []
 
 
-Overfull \hbox (1.20993pt too wide) in paragraph at lines 13--16
+Overfull \hbox (1.20993pt too wide) in paragraph at lines 17--28
 \OT1/cmr/m/n/12 256x256 pixel sil-i-con TimePIX Ap-pli-ca-tion Spe-cific In-te-
 grated Cir-cuit (ASIC)
  []
 
-<../figures/minipix_silicon.pdf, id=90, 287.0725pt x 203.76125pt>
+<../figures/minipix_silicon.pdf, id=91, 287.0725pt x 203.76125pt>
 File: ../figures/minipix_silicon.pdf Graphic file (type pdf)
 <use ../figures/minipix_silicon.pdf>
-Package pdftex.def Info: ../figures/minipix_silicon.pdf  used on input line 35.
+Package pdftex.def Info: ../figures/minipix_silicon.pdf  used on input line 47.
 
 (pdftex.def)             Requested size: 390.0pt x 276.82558pt.
 [3] [4 <../figures/minipix_silicon.pdf>]) (./Methods.tex [5]
@@ -872,21 +878,26 @@ File: ../figures/ctva-cropped.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../figures/ctva-cropped.pdf  used on input line 106.
 (pdftex.def)             Requested size: 390.0pt x 331.95673pt.
  [11 <../figures/temps_flight_2018.pdf>]
-<../figures/tracks.png, id=428, 752.8125pt x 752.8125pt>
+<../figures/stuartgraphic.pdf, id=428, 434.62375pt x 270.00874pt>
+File: ../figures/stuartgraphic.pdf Graphic file (type pdf)
+<use ../figures/stuartgraphic.pdf>
+Package pdftex.def Info: ../figures/stuartgraphic.pdf  used on input line 117.
+(pdftex.def)             Requested size: 390.0pt x 242.30109pt.
+<../figures/tracks.png, id=429, 752.8125pt x 752.8125pt>
 File: ../figures/tracks.png Graphic file (type png)
 <use ../figures/tracks.png>
-Package pdftex.def Info: ../figures/tracks.png  used on input line 114.
+Package pdftex.def Info: ../figures/tracks.png  used on input line 126.
 (pdftex.def)             Requested size: 390.0pt x 390.0059pt.
- [12 <../figures/ctva-cropped.pdf>])
-(./Discussion.tex [13 <../figures/tracks.png>] [14] [15] [16])
-(./Conclusion.tex) [17] (./Acknowledgements.tex) (./Funding.tex)
-(./Appendix.tex) (./Bibliography.tex
+ [12 <../figures/ctva-cropped.pdf>]
+[13 <../figures/stuartgraphic.pdf>]) (./Discussion.tex [14 <../figures/tracks.p
+ng>] [15] [16] [17]) (./Conclusion.tex) [18] (./Acknowledgements.tex)
+(./Funding.tex) (./Appendix.tex) (./Bibliography.tex
 Underfull \hbox (badness 6477) in paragraph at lines 28--29
 \OT1/cmr/m/n/12 Their Oc-cu-pa-tional Ex-po-sure to Ion-iz-ing Ra-di-a-tion, av
 ail-able
  []
 
-[18]
+[19]
 Underfull \hbox (badness 3302) in paragraph at lines 41--43
 []\OT1/cmr/m/n/12 source for im-age: Mea-sure-ment of the en-ergy res-o-lu-tion
  and
@@ -915,7 +926,7 @@ Overfull \hbox (165.52779pt too wide) in paragraph at lines 41--43
 xel-[]detector-[]with-[]USB-[]interface-[]FITPix _
  []
 
-
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
 []\OT1/cmr/m/n/12 The Wors-en-ing Cos-mic Ray Sit-u-a-tion, avail-able
  []
@@ -932,13 +943,13 @@ Underfull \hbox (badness 1577) in paragraph at lines 53--54
  (ac-cessed on March 6th,
  []
 
-[19]
+
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 \OT1/cmr/m/n/12 at []$\OT1/cmtt/m/n/12 https : / / ro . uow . edu . au / cgi / 
 viewcontent . cgi ? article = 5605 &
  []
 
-
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 70--71
 []\OT1/cmr/m/n/12 ADVACAM, MINIPIX Ver-sion 1.0 Datasheet, avail-able at
  []
@@ -949,22 +960,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--71
 / 2017 / 05 /
  []
 
-[20])
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 243.
- [21]
+ [22]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 243.
  (./Abstract.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 243.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 243.
 Package rerunfilecheck Info: File `Abstract.out' has not changed.
-(rerunfilecheck)             Checksum: 47F905B61D953204F32997EC4DDD036E;738.
+(rerunfilecheck)             Checksum: 5B107F6A934FB3FF05B12547873C2B29;742.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 243.
  ) 
 Here is how much of TeX's memory you used:
- 18194 strings out of 492649
- 353254 string characters out of 6129622
- 398991 words of memory out of 5000000
- 21840 multiletter control sequences out of 15000+600000
+ 18202 strings out of 492649
+ 353467 string characters out of 6129622
+ 399283 words of memory out of 5000000
+ 21845 multiletter control sequences out of 15000+600000
  543089 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,9n,50p,10359b,1091s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -984,10 +995,10 @@ ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/
 2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2
 018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Abstract.pdf (21 pages, 859837 bytes).
+Output written on Abstract.pdf (22 pages, 929654 bytes).
 PDF statistics:
- 591 PDF objects out of 1000 (max. 8388607)
- 345 compressed objects within 4 object streams
- 68 named destinations out of 1000 (max. 500000)
- 150 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 777 PDF objects out of 1000 (max. 8388607)
+ 440 compressed objects within 5 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 155 words of extra memory for PDF output out of 10000 (max. 10000000)
 
