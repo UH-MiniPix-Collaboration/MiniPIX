@@ -29,3 +29,7 @@ paper/Abstract.aux
 paper/Abstract.log
 paper/Abstract.out
 paper/Abstract.pdf
+*.aux
+*.log
+*.out
+*.pdf
