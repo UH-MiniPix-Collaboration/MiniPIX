@@ -18,7 +18,6 @@ paper/Abstract.aux
 paper/Abstract.pdf
 paper/Abstract.log
 MiniPIX/
-*.pdf
 *.log
 *.aux
 paper/Abstract.pdf
@@ -29,11 +28,7 @@ paper/Abstract.aux
 paper/Abstract.log
 paper/Abstract.out
 paper/Abstract.pdf
-<<<<<<< HEAD
 *.aux
 *.log
 *.out
-*.pdf
 *.spl
-=======
->>>>>>> parent of e8d7bfb... Update .gitignore
