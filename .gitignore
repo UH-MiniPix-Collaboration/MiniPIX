@@ -29,8 +29,11 @@ paper/Abstract.aux
 paper/Abstract.log
 paper/Abstract.out
 paper/Abstract.pdf
+<<<<<<< HEAD
 *.aux
 *.log
 *.out
 *.pdf
 *.spl
+=======
+>>>>>>> parent of e8d7bfb... Update .gitignore
