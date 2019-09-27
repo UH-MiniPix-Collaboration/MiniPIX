@@ -42,14 +42,34 @@ Additionally, data from the CRaTER cosmic ray telescope aboard NASA’s Lunar Re
 %this includes more discussion about our instrument
 %include and discuss relevant figures
 %include electronic circuits/configuration
-%Discuss intrument development
+%Discuss instrument development
 %need general background of instrument (From Renshaw: It was developed by the TimePIX/MiniPIX Collaboration originally and commercialized and sold by Advacam, you should make this point more clear, and then also give a reference to the original Collaboration paper that introduces the devices.
 %Talk about minipix works! how we can get dose from the device - there is no derivation from the counts!
 %include talk about Clusters and cluster types - 
 %%what is a cluster type and why should anyone care (include relevant figures)
 %What are LET and Quality Factors and why are they important
 %Show it works (this is our raw data!)
-The MiniPIX is a portable radiation camera developed by the TimePIX/MiniPIX Collaboration and commercialized by Advacam~\cite{advacam}.  It utilizes a 256x256 pixel silicon TimePIX Application Specific Integrated Circuit (ASIC) and a USB readout interface. The device can be operated under one of three modes: time-of-arrival (TOA), time-over-threshold (TOT), or single particle counting. 
+%
+\begin{figure}[H] %DISCUSS THIS FIGURE AND REFERENCE IN TEXT
+    \centering
+    %%%%%%%%%%%%%%%change to width=0.35\textwidth for print
+    %width=/textwidth for review
+    \includegraphics[width=\textwidth]{MiniPIX_Device.pdf} 
+    \caption{MiniPIX~\cite{advacam} USB Device. A is the sensor window, B is the protective cover, C is protective cover switch, and D is the USB.}
+    \label{fig:minipix_usb}
+\end{figure}
+%
+The MiniPIX, shown in Figure~\ref{fig:minipix_usb}, is a portable radiation camera developed by the TimePIX-MiniPIX Collaboration and commercialized by Advacam~\cite{advacam}.  It utilizes a 256x256 pixel silicon TimePIX Application Specific Integrated Circuit (ASIC) and a USB readout interface.   The MiniPIX operates in a frame-based data readout mode and has a digital shutter~\cite{stuartthesis}.The device can be operated under one of three modes: time-of-arrival (TOA), time-over-threshold (TOT), or single particle counting.  TOA mode for particle analysis measures the pulse arrival time recorded on the silicon chip.  TOT mode can be used to measure the charge of incident particles onto the detector.  Single particle counting mode counts each pulse once over a given threshold.  Frame length varies with each mode and is the main limiting factor for MiniPIX applications.  The built-in counter may be saturated if frame length isn't limited for each mode.  In general, the frame length must be kept short for all modes.  Tracks from single particle events can be measured in TOT mode, therefore frame length must be kept short to prevent tracks from overlapping~\cite{stuartthesis}.  Such tracks can be seen in figure~\ref{fig:sample_2018}, recorded on the 2018 SORA flight.
+%
+\begin{figure}[H] %DISCUSS THIS FIGURE AND REFERENCE IN TEXT
+    \centering
+    %%%%%%%%%%%%%%%change to width=0.35\textwidth for print
+    %width=/textwidth for review
+    \includegraphics[width=\textwidth]{2018_track.pdf} 
+    \caption{Particle track recorded from 2018 SORA flight}
+    \label{fig:sample_2018}
+\end{figure}
+
 %%% Guzik recommends we explain what the different modes mean:
 %TOA:TOA mode measures the time from when the preamp goes high against the threshold until the end of the acquisition frame.Time of Arrival - measures the arrival time of a pulse. In TOA mode the chip measures the particle arrival time by counting from when the preamplifier goes high on the discriminator to the end of the acquisition (which can be triggered in hardware, or in software).
 %
@@ -57,8 +77,11 @@ The MiniPIX is a portable radiation camera developed by the TimePIX/MiniPIX Coll
 %
 %Single Particle Counting: "MediPIX mode" In Medipix mode the chip counts the number of times the signal goes higher than the threshold. Medipix - photon/pulse counting.
 %
+%Each pixel in the Timepix contains a preamplifier, discriminator threshold, 14 bit counter and can operate in one of three modes
+%
 The MiniPIX is capable of individual particle differentiation and when operating in TOT mode can be used to measure dosimetric endpoints such as absorbed dose and dose equivalent. Similar devices to the MiniPIX utilizing a TimePIX ASIC have been evaluated on high altitude balloon flights by Urbar et.al \cite{bexus} and are currently deployed on the ISS for performing real-time space radiation monitoring \cite{timepixiss}. However, the usage of the MiniPIX in combination with a low cost single board computer as a portable radiation monitoring device has yet to be fully explored. The SORA flights in 2017 and 2018 served as a test bed for such a system.
 
+%
 %\begin{figure}[H] %DISCUSS THIS FIGURE AND REFERENCE IN TEXT
 %    \centering
 %    %%%%%%%%%%%%%%%change to width=0.35\textwidth for print
@@ -69,16 +92,14 @@ The MiniPIX is capable of individual particle differentiation and when operating
 %    %source for image: Measurement of the energy resolution and calibration of hybrid pixel detectors with GaAs:Cr sensor and Timepix readout chip - Scientific Figure on ResearchGate. Available from: https://www.researchgate.net/figure/a-Structure-of-a-Timepix-detector-b-Timepix-pixel-detector-with-USB-interface-FITPix_fig3_270906129 [accessed 23 Apr, 2019]
 %\end{figure}
 %%
-\begin{figure}[H] %DISCUSS THIS FIGURE AND REFERENCE IN TEXT
-    \centering
-    %%%%%%%%%%%%%%%change to width=0.35\textwidth for print
-    %width=/textwidth for review
-    \includegraphics[width=\textwidth]{MiniPIX_Device.pdf} 
-    \caption{MiniPIX~\cite{advacam} USB Device. A is the sensor window, B is the protective cover, C is protective cover switch, and D is the USB.}
-    \label{fig:minipix_usb}
-\end{figure}
 
-During the High Altitude Student Platform (HASP) 2017 and 2018 flights \cite{hasp}, the SORA payloads carried a MiniPIX interfaced with a Raspberry Pi 3 B+ (RPI) Single Board Computer~\cite{rpi} to test the feasibility of a system for real-time measurements of absorbed dose from cosmic radiation. Data, such as counts and absorbed dose from the MiniPIX, was downlinked and analyzed in real time through the HASP downlink interface. The HASP 2017 flight launched from Fort Sumner, New Mexico on September 4th, 2017 at 14:04 UTC and ascended to a float altitude of approximately $\SI{31.5}{\kilo\meter}$ at 16:22 UTC; which was maintained for approximately \SI{10.5}{\hour}. The HASP 2017 payload drifted west for a total ground distance of \SI{580}{\kilo\meter} and was recovered just north of the Apache-Sitgreaves National Forest in Arizona.  On September 4th, 2018 at 14:03 UTC the HASP 2018 mission launched from Fort Sumner, Mew Mexico.  The 2018 payload reached a stable float altitude of $\SI{37.2}{\kilo\meter}$ at 16:30 UTC and the total float duration was approximately \SI{9.0}{\hour}. The 2018 payload terminated its flight and landed approximately \SI{96.6}{\kilo\meter} southwest of Mt Graham, Arizona after traveling a total distance of \SI{550}{\kilo\meter}.
+During the High Altitude Student Platform (HASP) 2017 and 2018 flights \cite{hasp}, the SORA payloads carried a MiniPIX interfaced with a Raspberry Pi 3 B+ (RPI) Single Board Computer~\cite{rpi} to test the feasibility of a system for real-time measurements of absorbed dose from cosmic radiation. Data, such as counts and absorbed dose from the MiniPIX, was downlinked and analyzed in real time through the HASP downlink interface. 
+%We need to add:
+%Electronic circuits of our payload - if possible
+%Instrument development details for each mission (not the settings, just the development that went into it)
+%More background if necessary of how the MiniPIX works
+
+The HASP 2017 flight launched from Fort Sumner, New Mexico on September 4th, 2017 at 14:04 UTC and ascended to a float altitude of approximately $\SI{31.5}{\kilo\meter}$ at 16:22 UTC; which was maintained for approximately \SI{10.5}{\hour}. The HASP 2017 payload drifted west for a total ground distance of \SI{580}{\kilo\meter} and was recovered just north of the Apache-Sitgreaves National Forest in Arizona.  On September 4th, 2018 at 14:03 UTC the HASP 2018 mission launched from Fort Sumner, Mew Mexico.  The 2018 payload reached a stable float altitude of $\SI{37.2}{\kilo\meter}$ at 16:30 UTC and the total float duration was approximately \SI{9.0}{\hour}. The 2018 payload terminated its flight and landed approximately \SI{96.6}{\kilo\meter} southwest of Mt Graham, Arizona after traveling a total distance of \SI{550}{\kilo\meter}.
 
 %START Guzik Changes:
 % We need to 1. Setup what is being measured
