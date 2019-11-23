@@ -86,12 +86,16 @@ The MiniPIX operates in a frame-based data readout mode and has a digital shutte
 %
 %Each pixel in the Timepix contains a preamplifier, discriminator threshold, 14 bit counter and can operate in one of three modes
 %
-The MiniPIX is capable of individual particle differentiation and when operating in TOT mode can be used to measure dosimetric endpoints such as absorbed dose and dose equivalent.
+The MiniPIX is capable of individual particle differentiation and when operating in TOT mode can be used to measure dosimetric endpoints such as absorbed dose and dose equivalent. Individual particle tracks are defined as clusters, which are groups of neighboring pixels on the sensor.  Cluster formation along with the measured Linear Energy Transfer (LET) both are use in the analysis of absorbed dose and dose equivalency.
+%go in further depth talking about cluster formation
+%talk about LET and absorbed dose
+%talk again about individual particle differentiation
+%introduce image
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{stuartgraphic.pdf}
-\caption{Cluster types\cite{stuartalgo}} %%%NEED CITATION
+\caption{Cluster types\cite{stuartalgo}}
 \label{fig:stuartfigure}
 \end{figure}
 
