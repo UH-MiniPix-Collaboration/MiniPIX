@@ -72,7 +72,7 @@ The MiniPIX operates in a frame-based data readout mode and has a digital shutte
     \centering
     %%%%%%%%%%%%%%%change to width=0.35\textwidth for print
     %width=/textwidth for review
-    \includegraphics[width=\textwidth]{2018_track.pdf} 
+    \includegraphics[width=.50\textwidth]{2018_track.pdf} 
     \caption{Particle track recorded from 2018 SORA flight}
     \label{fig:sample_2018}
 \end{figure}
@@ -86,18 +86,20 @@ The MiniPIX operates in a frame-based data readout mode and has a digital shutte
 %
 %Each pixel in the Timepix contains a preamplifier, discriminator threshold, 14 bit counter and can operate in one of three modes
 %
-The MiniPIX is capable of individual particle differentiation and when operating in TOT mode can be used to measure dosimetric endpoints such as absorbed dose and dose equivalent. Individual particle tracks are defined as clusters, which are groups of neighboring pixels on the sensor.  Cluster formation along with the measured Linear Energy Transfer (LET) both are use in the analysis of absorbed dose and dose equivalency.
-%go in further depth talking about cluster formation
-%talk about LET and absorbed dose
-%talk again about individual particle differentiation
-%introduce image
+The MiniPIX is capable of individual particle differentiation and when operating in TOT mode can be used to measure dosimetric endpoints such as absorbed dose and dose equivalent. Individual particles deposit energy in the silicon and are characterized by tracks.  Different particles, as shown in Figure~\ref{fig:stuartfigure}, create distinct patterns. The individual particle tracks are defined as clusters, which are groups of neighboring activated pixels on the sensor. These cluster formations are important in the analysis and calculation of radiation dosimetry. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{stuartgraphic.pdf}
-\caption{Cluster types\cite{stuartalgo}}
+\caption{Cluster types sortedy by clustering algorithm developed for use at CERF facility at CERN, read down using an if,else if format.\cite{stuartalgo}}
 \label{fig:stuartfigure}
 \end{figure}
+
+Analyzing tracks and their parameters yields valuable data.  There are various parameters, including the cluster length, cluster density, and deposited energy.  Calculating these basic parameters allows for sorting of the clusters into basic geometric shapes as shown in Figure~\ref{fig:stuartfigure}.  These basic cluster parameters then allow for more complex analysis to extract useful information such the absorbed dose from a cluster and projected track length.  Furthermore, the projected track length then is used to calculate the Linear Energy Transfer (LET).  LET is dependent on particle track structure and morphology, so it is defined as the deposited energy per unit length.  In dosimetry applications, the LET and deposited dose are important quantities since they are needed to calculate absorbed rates, such as the dose equivalent in muscle tissue.
+%go in further depth talking about cluster formation
+%talk again about individual particle differentiation
+%talk about LET and absorbed dose
+%introduce image
 
 Similar devices to the MiniPIX utilizing a TimePIX ASIC have been evaluated on high altitude balloon flights by Urbar et.al \cite{bexus} and are currently deployed on the ISS for performing real-time space radiation monitoring \cite{timepixiss}. However, the usage of the MiniPIX in combination with a low cost single board computer as a portable radiation monitoring device has yet to be fully explored. The SORA flights in 2017 and 2018 served as a test bed for such a system.
 
